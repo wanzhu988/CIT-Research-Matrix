@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CIT Professor Network</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #f4f4f4; }
+        #main { width: 100%; height: 100vh; }
+        .control-panel {
+            position: absolute; top: 20px; left: 20px; z-index: 999;
+            background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="control-panel">
+        <h3>CIT Faculty Visualization</h3>
+        <p>Hover nodes to see connections.</p>
+    </div>
+    
+    <div id="main"></div>
+
+    <script type="text/javascript">
+        var chartDom = document.getElementById('main');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        // 模拟 JSON 数据 (实际使用时，用 $.getJSON('data.json', function(data){...}) 替换)
+        var rawData = [
+            { "name": "Prof. Stefan Bauer", "dept": "CS", "inst": ["MDSI", "MUDS", "MCML"] },
+            { "name": "Prof. Zeynep Akata", "dept": "CS", "inst": ["MDSI", "MCML"] },
+            { "name": "Prof. Pramod Bhatotia", "dept": "CS", "inst": ["MIRMI", "MDSI"] },
+            { "name": "Prof. Johannes Zimmer", "dept": "MATH", "inst": [] },
+             // 这里填入你所有的教授数据...
+        ];
+
+        // 数据处理：将 JSON 转换为 ECharts 需要的 Nodes 和 Links
+        var nodes = [];
+        var links = [];
+        var categories = [{name: 'Professor'}, {name: 'Department'}, {name: 'Institute'}];
+        var existMap = {}; // 防止重复添加节点
+
+        // 辅助函数：添加节点
+        function addNode(name, category, size, color) {
+            if (!existMap[name]) {
+                nodes.push({
+                    name: name,
+                    category: category,
+                    symbolSize: size,
+                    itemStyle: { color: color },
+                    label: { show: size > 20 } // 大节点显示文字
+                });
+                existMap[name] = true;
+            }
+        }
+
+        rawData.forEach(function (prof) {
+            // 1. 添加教授节点
+            addNode(prof.name, 0, 15, '#5470c6');
+
+            // 2. 添加学院节点并连线
+            if (prof.dept) {
+                addNode(prof.dept, 1, 40, '#91cc75');
+                links.push({ source: prof.name, target: prof.dept });
+            }
+
+            // 3. 添加机构节点并连线
+            if (prof.inst) {
+                prof.inst.forEach(function (inst) {
+                    addNode(inst, 2, 50, '#fac858');
+                    links.push({ source: prof.name, target: inst });
+                });
+            }
+        });
+
+        option = {
+            title: { text: '', top: 'bottom', left: 'right' },
+            tooltip: {},
+            legend: [{ data: categories.map(function (a) { return a.name; }) }],
+            series: [
+                {
+                    type: 'graph',
+                    layout: 'force', // 力导向布局
+                    data: nodes,
+                    links: links,
+                    categories: categories,
+                    roam: true, // 允许缩放和平移
+                    label: { position: 'right', formatter: '{b}' },
+                    lineStyle: { color: 'source', curveness: 0.3 },
+                    emphasis: {
+                        focus: 'adjacency', // 悬停时只高亮相邻节点
+                        lineStyle: { width: 5 }
+                    },
+                    force: {
+                        repulsion: 300, // 节点之间的排斥力
+                        edgeLength: 100
+                    }
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+        
+        // 自适应窗口大小
+        window.onresize = function() { myChart.resize(); };
+    </script>
+</body>
+</html>
