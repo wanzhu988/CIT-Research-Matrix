@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Prof. Dr. Hans-Joachim Bungartz",
+    "dept": "CS",
+    "inst": ["MUDS"],
+    "website": "https://www.professoren.tum.de/bungartz-hans-joachim"
+  },
+  {
+    "name": "Prof. Chunyang Chen",
+    "dept": "CS",
+    "inst": ["MDSI"],
+    "website": "https://www.professoren.tum.de/en/chen-chunyang"
+  },
+  {
+    "name": "Prof. Dr. Daniel Cremers",
+    "dept": "CS",
+    "inst": ["MIRMI", "MDSI", "MIBE", "MUDS", "MCML"],
+    "website": "https://www.professoren.tum.de/en/cremers-daniel"
+  },
+
+  {
+    "name": "Prof. Dr.-Ing. Jia Chen",
+    "dept": "EE",
+    "inst": ["MIRMI"],
+    "website": "https://www.professoren.tum.de/chen-jia"
+  },
+  {
+    "name": "Prof. Dr. Ghulam Destgeer",
+    "dept": "EE",
+    "inst": ["MIBE"],
+    "website": "https://www.professoren.tum.de/destgeer-ghulam"
+  },
+  {
+    "name": "Prof. Dr.-Ing. Can Dincer",
+    "dept": "EE",
+    "inst": ["MIBE"],
+    "website": "https://www.professoren.tum.de/en/dincer-can"
+  },
+  {
+    "name": "Prof. Dr. Murad Alim",
+    "dept": "MATH",
+    "inst": [],
+    "website": "https://www.professoren.tum.de/en/alim-murad"
+  },
+  {
+    "name": "Prof. Ph.D. Donna Ankerst",
+    "dept": "MATH",
+    "inst": ["MDSI"],
+    "website": "https://www.professoren.tum.de/en/ankerst-donna"
+  },
+  {
+    "name": "Prof. Dr. Ulrich Bauer",
+    "dept": "MATH",
+    "inst": ["MDSI", "MCML"],
+    "website": "https://www.professoren.tum.de/bauer-ulrich"
+  },
+  {
+    "name": "Prof. Dr.-Ing. Alin Olimpiu Albu-Schäffer",
+    "dept": "CE",
+    "inst": ["MIRMI"],
+    "website": "https://www.professoren.tum.de/albu-schaeffer-alin"
+  },
+  {
+    "name": "Prof. Dr.-Ing. Matthias Althoff",
+    "dept": "CE",
+    "inst": ["MIRMI", "MCML"],
+    "website": "https://www.ce.cit.tum.de/cps/members/prof-dr-ing-matthias-althoff/"
+  },
+  {
+    "name": "Prof. Dr.-Ing. Hussam Amrouch",
+    "dept": "CE",
+    "inst": ["MIRMI"],
+    "website": "https://www.professoren.tum.de/amrouch-hussam"
+  }
+]
