@@ -6,23 +6,96 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #f4f4f4; }
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #f9f9f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         #main { width: 100%; height: 100vh; }
+        
+        /* --- 左上角控制面板 --- */
         .control-panel {
-            position: absolute; top: 20px; left: 20px; z-index: 999;
+            position: absolute; top: 20px; left: 20px; z-index: 10;
             background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); font-family: sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); border: 1px solid #eee;
+            max-width: 260px;
         }
-        /* // <-- 修改处: 增加一条提示信息的样式 */
-        .hint { font-size: 12px; color: #666; margin-top: 5px; }
+        .control-panel h3 { margin-top: 0; margin-bottom: 10px; font-size: 16px; color: #333; }
+        .hint { font-size: 12px; color: #666; line-height: 1.5; }
+
+        /* --- 侧边抽屉 (Drawer) 样式 --- */
+        .drawer {
+            position: fixed; 
+            top: 0; 
+            right: -400px; /* 默认隐藏在屏幕右侧外部 */
+            width: 350px; 
+            height: 100%; 
+            background-color: #fff;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1); /* 左侧阴影 */
+            z-index: 999; /* 保证在图表之上 */
+            transition: right 0.3s ease-in-out; /* 滑动动画 */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .drawer.open {
+            right: 0; /* 滑入屏幕 */
+        }
+
+        .drawer-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .drawer-header h2 { margin: 0; font-size: 18px; color: #333; }
+        .close-btn { 
+            cursor: pointer; font-size: 24px; color: #999; line-height: 1; 
+            transition: color 0.2s;
+        }
+        .close-btn:hover { color: #333; }
+
+        .drawer-body {
+            flex: 1; /* 占据剩余高度 */
+            padding: 20px;
+            overflow-y: auto; /* 内容过多时滚动 */
+        }
+
+        /* 列表项样式 */
+        .prof-list-item {
+            padding: 12px 0; border-bottom: 1px solid #f5f5f5;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .prof-link { text-decoration: none; color: #333; font-weight: 500; font-size: 14px; }
+        .prof-link:hover { color: #007bff; }
+        .dept-badge { 
+            padding: 2px 8px; border-radius: 12px; font-size: 11px; 
+            font-weight: bold; border: 1px solid transparent;
+        }
+        .inst-link-btn {
+            display: block; margin-bottom: 15px; text-decoration: none;
+            color: #007bff; font-size: 13px; font-weight: 600;
+        }
     </style>
 </head>
 <body>
 
     <div class="control-panel">
-        <h3>CIT Research Matrix Visualization</h3>
-        <p>Hover nodes to see connections.</p>
-        <p class="hint">🖱️ Click a node to visit website.</p>
+        <h3>CIT Network</h3>
+        <div class="hint">
+            <p>🎨 <b>Colors:</b> Identify Departments.</p>
+            <p>🖱️ <b>Click Nodes:</b>
+                <br>• <b>Dept/Institute:</b> Open list (Right Drawer).
+                <br>• <b>Professor:</b> Visit website.
+            </p>
+        </div>
+    </div>
+
+    <div id="infoDrawer" class="drawer">
+        <div class="drawer-header">
+            <h2 id="drawerTitle">Title</h2>
+            <span class="close-btn" onclick="closeDrawer()">&times;</span>
+        </div>
+        <div class="drawer-body">
+            <a id="drawerLink" href="#" target="_blank" class="inst-link-btn">🔗 Visit Website</a>
+            <div id="drawerList"></div>
+        </div>
     </div>
     
     <div id="main"></div>
@@ -32,7 +105,16 @@
         var myChart = echarts.init(chartDom);
         var option;
 
-        // 机构链接映射表
+        // --- 1. 颜色配置 (尽量还原 Google Sheets 截图) ---
+        // CS: 浅灰底黑字, CE: 浅绿底绿字, EE: 深棕底白字, MATH: 浅红底红字
+        const deptStyle = {
+            "CS":   { color: "#eaecf0", labelColor: "#333333", border: "#d0d7de" },
+            "CE":   { color: "#d1e8d6", labelColor: "#137333", border: "#a8dab5" },
+            "EE":   { color: "#795548", labelColor: "#ffffff", border: "#5d4037" }, 
+            "MATH": { color: "#ffcdd2", labelColor: "#b71c1c", border: "#ef9a9a" }
+        };
+        const instColor = "#fcca00"; 
+
         var orgUrls = {
             "CS": "https://www.cs.cit.tum.de/",
             "MATH": "https://www.math.cit.tum.de/",
@@ -45,100 +127,170 @@
             "MIBE": "https://www.bioengineering.tum.de/"
         };
 
-        // 显示加载动画
+        // 抽屉控制函数
+        function openDrawer() { document.getElementById('infoDrawer').classList.add('open'); }
+        function closeDrawer() { document.getElementById('infoDrawer').classList.remove('open'); }
+
         myChart.showLoading();
 
-        // --- 核心修改：读取外部 JSON 文件 ---
         $.getJSON('data.json', function (rawData) {
-            
-            // 隐藏加载动画
             myChart.hideLoading();
 
             var nodes = [];
             var links = [];
-            var categories = [{name: 'Professor'}, {name: 'Department'}, {name: 'Institute'}];
             var existMap = {}; 
 
-            // 辅助函数
-            function addNode(name, category, size, color, url) {
-                if (!existMap[name]) {
-                    nodes.push({
-                        name: name,
-                        category: category,
-                        symbolSize: size,
-                        itemStyle: { color: color },
-                        clickUrl: url, 
-                        label: { show: size > 20 } 
-                    });
-                    existMap[name] = true;
+            function addNode(name, type, deptKey) {
+                if (existMap[name]) return;
+                
+                let node = {
+                    name: name,
+                    nodeType: type,
+                    dept: deptKey,
+                    draggable: true
+                };
+
+                if (type === 'dept') {
+                    // --- 修改：院系节点样式 ---
+                    const style = deptStyle[name] || { color: '#ccc', labelColor: '#000' };
+                    node.symbolSize = 70; // 大圆
+                    node.itemStyle = { 
+                        color: style.color, 
+                        borderColor: style.border, borderWidth: 2,
+                        opacity: 1
+                    };
+                    // Label 配置：居中 (inside)
+                    node.label = { 
+                        show: true, 
+                        position: 'inside', // <--- 关键修改：文字在圆内
+                        fontSize: 14, 
+                        fontWeight: 'bold', 
+                        color: style.labelColor 
+                    };
+                    node.clickUrl = orgUrls[name];
+
+                } else if (type === 'prof') {
+                    const style = deptStyle[deptKey] || { color: '#5470c6' };
+                    node.symbolSize = 18;
+                    node.itemStyle = { color: style.color, borderColor: style.border, borderWidth: 1 };
+                    node.label = { 
+                        show: true, position: 'right', color: '#666', fontSize: 12,
+                        formatter: function(p) { return p.data.name.split(' ').pop(); }
+                    }; 
+                    let profData = rawData.find(p => p.name === name);
+                    node.clickUrl = profData ? profData.website : "";
+
+                } else if (type === 'inst') {
+                    node.symbolSize = 45;
+                    node.itemStyle = { color: instColor, borderColor: '#f57f17', borderWidth: 2 };
+                    node.label = { show: true, fontSize: 11, fontWeight: 'bold', color: '#333' };
+                    node.clickUrl = orgUrls[name];
                 }
+
+                nodes.push(node);
+                existMap[name] = true;
             }
 
-            // 处理数据
+            // 构建数据
             rawData.forEach(function (prof) {
-                // 1. 教授
-                addNode(prof.name, 0, 15, '#5470c6', prof.website);
-
-                // 2. 学院
+                addNode(prof.name, 'prof', prof.dept);
                 if (prof.dept) {
-                    addNode(prof.dept, 1, 40, '#91cc75', orgUrls[prof.dept]);
-                    links.push({ source: prof.name, target: prof.dept });
+                    addNode(prof.dept, 'dept', prof.dept);
+                    links.push({ source: prof.name, target: prof.dept, lineStyle: { color: '#ccc', width: 2, opacity: 0.5 } });
                 }
-
-                // 3. 机构
                 if (prof.inst) {
-                    prof.inst.forEach(function (inst) {
-                        addNode(inst, 2, 50, '#fac858', orgUrls[inst]);
-                        links.push({ source: prof.name, target: inst });
+                    prof.inst.forEach(function (instName) {
+                        addNode(instName, 'inst', null);
+                        links.push({ source: prof.name, target: instName, lineStyle: { color: '#fcca00', type: 'dashed', width: 1 } });
                     });
                 }
             });
 
-            // 配置图表
             option = {
-                title: { text: '', top: 'bottom', left: 'right' },
-                tooltip: {
-                    formatter: function(params) {
-                        if (params.dataType === 'node' && params.data.clickUrl) {
-                            return params.name + '<br/><span style="font-size:10px; color:#aaa;">(Click to visit website)</span>';
-                        }
-                        return params.name;
-                    }
-                },
-                legend: [{ data: categories.map(function (a) { return a.name; }) }],
+                title: { text: '' },
+                tooltip: { trigger: 'item', padding: 10, backgroundColor: 'rgba(255,255,255,0.9)', textStyle: {color:'#333'} },
                 series: [
                     {
                         type: 'graph',
                         layout: 'force',
                         data: nodes,
                         links: links,
-                        categories: categories,
                         roam: true,
-                        label: { position: 'right', formatter: '{b}' },
-                        lineStyle: { color: 'source', curveness: 0.3 },
-                        emphasis: {
-                            focus: 'adjacency',
-                            lineStyle: { width: 5 }
-                        },
+                        zoom: 0.85, // 稍微缩小一点，给右侧侧边栏留点视觉空间
+                        label: { position: 'right' },
                         force: {
-                            repulsion: 300,
-                            edgeLength: 100
-                        }
+                            repulsion: 350,
+                            gravity: 0.1,
+                            edgeLength: [40, 160],
+                            layoutAnimation: true
+                        },
+                        emphasis: { focus: 'adjacency', lineStyle: { width: 4 } }
                     }
                 ]
             };
 
             myChart.setOption(option);
 
-            // 点击事件
+            // --- 核心交互逻辑 ---
             myChart.on('click', function(params) {
-                if (params.dataType === 'node' && params.data.clickUrl && params.data.clickUrl !== "") {
-                    window.open(params.data.clickUrl, '_blank');
+                if (params.dataType !== 'node') return;
+                const nodeData = params.data;
+
+                // 逻辑：如果点击的是 "Institute" 或者 "Department" -> 打开侧边栏
+                if (nodeData.nodeType === 'inst' || nodeData.nodeType === 'dept') {
+                    
+                    const targetName = nodeData.name;
+                    const isDept = nodeData.nodeType === 'dept';
+
+                    // 1. 设置标题和链接
+                    $('#drawerTitle').text(targetName + (isDept ? " Department" : " Institute"));
+                    $('#drawerLink').attr('href', nodeData.clickUrl).text("🔗 Visit " + targetName + " Website");
+
+                    // 2. 筛选成员 (院系 vs 机构 筛选逻辑不同)
+                    let members = [];
+                    if (isDept) {
+                        // 如果点的是院系，找所有 dept 字段等于该名字的教授
+                        members = rawData.filter(p => p.dept === targetName);
+                    } else {
+                        // 如果点的是机构，找 inst 数组包含该名字的教授
+                        members = rawData.filter(p => p.inst && p.inst.includes(targetName));
+                    }
+                    
+                    // 3. 生成列表 HTML
+                    let htmlContent = members.length ? '' : '<p style="color:#999">No members found.</p>';
+                    members.forEach(m => {
+                        let dStyle = deptStyle[m.dept] || { color: '#ccc', labelColor: '#000', border: '#999' };
+                        // 使用你要求的标签样式
+                        let badgeStyle = `background-color:${dStyle.color}; color:${dStyle.labelColor}; border:1px solid ${dStyle.border}`;
+                        
+                        htmlContent += `
+                            <div class="prof-list-item">
+                                <a href="${m.website}" target="_blank" class="prof-link">${m.name}</a>
+                                <span class="dept-badge" style="${badgeStyle}">${m.dept}</span>
+                            </div>
+                        `;
+                    });
+                    
+                    $('#drawerList').html(htmlContent);
+
+                    // 4. 打开侧边栏 (无遮罩)
+                    openDrawer();
+                } 
+                // 如果点的是教授 -> 直接跳转
+                else if (nodeData.clickUrl) {
+                    window.open(nodeData.clickUrl, '_blank');
+                }
+            });
+
+            // 点击画布空白处关闭侧边栏 (可选优化)
+            myChart.getZr().on('click', function(params) {
+                if (!params.target) {
+                    closeDrawer();
                 }
             });
 
         }).fail(function() {
-            alert("Error: Could not load data.json. If you are running locally, please use a local server or Firefox.");
+            alert("Error: Could not load data.json.");
         });
 
         window.onresize = function() { myChart.resize(); };

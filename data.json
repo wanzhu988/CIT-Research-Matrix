@@ -19,12 +19,90 @@
   },
 
   {
+    "name": "Prof. Dr. Mikhail Belkin",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Electromagnetic Sensors and Measurement Systems",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Alessio Gagliardi",
+    "dept": "EE",
+    "inst": ["MDSI"],
+    "research_group": [
+      {
+        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Bernhard Wolfrum",
+    "dept": "EE",
+    "inst": ["MIRMI", "MIBE"],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Eva Weig",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Franz Kreupl",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Kai Müller",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Marc Tornow",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
     "name": "Prof. Dr.-Ing. Jia Chen",
     "dept": "EE",
     "inst": ["MIRMI"],
     "website": "https://www.professoren.tum.de/chen-jia"
   },
-  {
+    {
     "name": "Prof. Dr. Ghulam Destgeer",
     "dept": "EE",
     "inst": ["MIBE"],
