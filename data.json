@@ -32,7 +32,7 @@
         "group_dept": "EE"
       }
     ],
-    "website": ""
+    "website": "https://www.professoren.tum.de/belkin-mikhail"
   },
   {
     "name": "Prof. Dr. rer. nat. Alessio Gagliardi",
@@ -44,21 +44,21 @@
         "group_dept": "EE"
       }
     ],
-    "website": ""
+    "website": "https://www.professoren.tum.de/en/gagliardi-alessio"
   },
   {
     "name": "Prof. Dr. Bernhard Wolfrum",
     "dept": "EE",
     "inst": ["MIRMI", "MIBE"],
     "research_group": [],
-    "website": ""
+    "website": "https://www.professoren.tum.de/wolfrum-bernhard"
   },
   {
     "name": "Prof. Dr. rer. nat. Eva Weig",
     "dept": "EE",
     "inst": [],
     "research_group": [],
-    "website": ""
+    "website": "https://www.professoren.tum.de/weig-eva"
   },
   {
     "name": "Prof. Dr. rer. nat. Franz Kreupl",
@@ -70,7 +70,7 @@
         "group_dept": "EE"
       }
     ],
-    "website": ""
+    "website": "https://www.professoren.tum.de/kreupl-franz"
   },
   {
     "name": "Prof. Dr. rer. nat. Kai Müller",
@@ -82,7 +82,7 @@
         "group_dept": "EE"
       }
     ],
-    "website": ""
+    "website": "https://www.professoren.tum.de/mueller-kai"
   },
   {
     "name": "Prof. Dr. rer. nat. Marc Tornow",
@@ -94,7 +94,7 @@
         "group_dept": "EE"
       }
     ],
-    "website": ""
+    "website": "https://www.professoren.tum.de/tornow-marc"
   },
   {
     "name": "Prof. Dr.-Ing. Jia Chen",
