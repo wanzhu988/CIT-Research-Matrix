@@ -1,23 +1,56 @@
 [
   {
-    "name": "Prof. Dr. Hans-Joachim Bungartz",
-    "dept": "CS",
-    "inst": ["MUDS"],
-    "website": "https://www.professoren.tum.de/bungartz-hans-joachim"
+    "name": "Prof. Dr.-Ing. Norbert Hanik",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Electromagnetic Sensors and Measurement Systems",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
   },
   {
-    "name": "Prof. Chunyang Chen",
-    "dept": "CS",
-    "inst": ["MDSI"],
-    "website": "https://www.professoren.tum.de/en/chen-chunyang"
+    "name": "Prof. Dr.-Ing. Thomas Eibert",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Electromagnetic Sensors and Measurement Systems",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
   },
   {
-    "name": "Prof. Dr. Daniel Cremers",
-    "dept": "CS",
-    "inst": ["MIRMI", "MDSI", "MIBE", "MUDS", "MCML"],
-    "website": "https://www.professoren.tum.de/en/cremers-daniel"
+    "name": "Prof. Dr. Gabriele Schrag",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Electromagnetic Sensors and Measurement Systems",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
   },
-
   {
     "name": "Prof. Dr. Mikhail Belkin",
     "dept": "EE",
@@ -32,33 +65,41 @@
         "group_dept": "EE"
       }
     ],
-    "website": "https://www.professoren.tum.de/belkin-mikhail"
+    "website": ""
   },
   {
-    "name": "Prof. Dr. rer. nat. Alessio Gagliardi",
+    "name": "Prof. Dr.-Ing. Christian Jirauschek",
     "dept": "EE",
-    "inst": ["MDSI"],
+    "inst": [],
     "research_group": [
       {
         "group_name": "Electronic, Optoelectronic and Hybrid Devices",
         "group_dept": "EE"
+      },
+      {
+        "group_name": "Electromagnetic Sensors and Measurement Systems",
+        "group_dept": "EE"
       }
     ],
-    "website": "https://www.professoren.tum.de/en/gagliardi-alessio"
+    "website": ""
   },
   {
-    "name": "Prof. Dr. Bernhard Wolfrum",
+    "name": "Prof. Dr. rer. nat. Alessio Gagliardi",
     "dept": "EE",
-    "inst": ["MIRMI", "MIBE"],
-    "research_group": [],
-    "website": "https://www.professoren.tum.de/wolfrum-bernhard"
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Eva Weig",
-    "dept": "EE",
-    "inst": [],
-    "research_group": [],
-    "website": "https://www.professoren.tum.de/weig-eva"
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
   },
   {
     "name": "Prof. Dr. rer. nat. Franz Kreupl",
@@ -68,9 +109,17 @@
       {
         "group_name": "Electronic, Optoelectronic and Hybrid Devices",
         "group_dept": "EE"
+      },
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
       }
     ],
-    "website": "https://www.professoren.tum.de/kreupl-franz"
+    "website": ""
   },
   {
     "name": "Prof. Dr. rer. nat. Kai Müller",
@@ -82,7 +131,7 @@
         "group_dept": "EE"
       }
     ],
-    "website": "https://www.professoren.tum.de/mueller-kai"
+    "website": ""
   },
   {
     "name": "Prof. Dr. rer. nat. Marc Tornow",
@@ -92,62 +141,1626 @@
       {
         "group_name": "Electronic, Optoelectronic and Hybrid Devices",
         "group_dept": "EE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
       }
     ],
-    "website": "https://www.professoren.tum.de/tornow-marc"
+    "website": ""
   },
   {
-    "name": "Prof. Dr.-Ing. Jia Chen",
+    "name": "Prof. Dr.-Ing. habil. Markus Becherer",
     "dept": "EE",
-    "inst": ["MIRMI"],
-    "website": "https://www.professoren.tum.de/chen-jia"
-  },
-    {
-    "name": "Prof. Dr. Ghulam Destgeer",
-    "dept": "EE",
-    "inst": ["MIBE"],
-    "website": "https://www.professoren.tum.de/destgeer-ghulam"
-  },
-  {
-    "name": "Prof. Dr.-Ing. Can Dincer",
-    "dept": "EE",
-    "inst": ["MIBE"],
-    "website": "https://www.professoren.tum.de/en/dincer-can"
-  },
-  {
-    "name": "Prof. Dr. Murad Alim",
-    "dept": "MATH",
     "inst": [],
-    "website": "https://www.professoren.tum.de/en/alim-murad"
+    "research_group": [
+      {
+        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
   },
   {
-    "name": "Prof. Ph.D. Donna Ankerst",
-    "dept": "MATH",
-    "inst": ["MDSI"],
-    "website": "https://www.professoren.tum.de/en/ankerst-donna"
-  },
-  {
-    "name": "Prof. Dr. Ulrich Bauer",
-    "dept": "MATH",
-    "inst": ["MDSI", "MCML"],
-    "website": "https://www.professoren.tum.de/bauer-ulrich"
-  },
-  {
-    "name": "Prof. Dr.-Ing. Alin Olimpiu Albu-Schäffer",
+    "name": "Dr. Ph.D. Majid Khadiv",
     "dept": "CE",
-    "inst": ["MIRMI"],
-    "website": "https://www.professoren.tum.de/albu-schaeffer-alin"
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [],
+    "website": ""
   },
   {
-    "name": "Prof. Dr.-Ing. Matthias Althoff",
+    "name": "Prof. Dr. Achim Lilienthal",
     "dept": "CE",
-    "inst": ["MIRMI", "MCML"],
-    "website": "https://www.ce.cit.tum.de/cps/members/prof-dr-ing-matthias-althoff/"
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Andreas Herkersdorf",
+    "dept": "CE",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Claudia Eckert",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Distributed & Mobile Computing",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Cristina Piazza",
+    "dept": "CE",
+    "inst": [
+      "MIRMI",
+      "MIBE"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Gordon Cheng",
+    "dept": "CE",
+    "inst": [
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Hans-Michael Gerndt",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Lorenzo Masia",
+    "dept": "CE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. M.Sc. Alexander König",
+    "dept": "CE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Martin Buss",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. phil. Tobias Vogl",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Amr Abdelhafez",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Dr.-Ing. Holger Boche",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Martin Schulz",
+    "dept": "CE",
+    "inst": [
+      "MUDS"
+    ],
+    "research_group": [
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Riccardo Marin",
+    "dept": "CE",
+    "inst": [
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Sebastian Steinhorst",
+    "dept": "CE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Alin-Olimpiu Albu-Schäffer",
+    "dept": "CE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Human-centered Engineering",
+        "group_dept": "Unknown"
+      },
+      {
+        "group_name": "Distributed & Mobile Computing",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Antonia Wachter-Zeh",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Bernhard Seeber",
+    "dept": "CE",
+    "inst": [
+      "MIRMI",
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Berthold Bäuml",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Carsten Trinitis",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Darius Burschka",
+    "dept": "CE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Eckehard Steinbach",
+    "dept": "CE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Georg Carle",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Distributed & Mobile Computing",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Georg Sigl",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. habil. Alois-Christian Knoll",
+    "dept": "CE",
+    "inst": [
+      "MIRMI",
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Human-centered Engineering",
+        "group_dept": "Unknown"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
   },
   {
     "name": "Prof. Dr.-Ing. Hussam Amrouch",
     "dept": "CE",
-    "inst": ["MIRMI"],
-    "website": "https://www.professoren.tum.de/amrouch-hussam"
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Jörg Ott",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Human-centered Engineering",
+        "group_dept": "Unknown"
+      },
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Distributed & Mobile Computing",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Klaus Diepold",
+    "dept": "CE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Matthias Althoff",
+    "dept": "CE",
+    "inst": [
+      "MIRMI",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Robert Wille",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Sandra Hirche",
+    "dept": "CE",
+    "inst": [
+      "MIRMI",
+      "MDSI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Stephan Günther",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Ulf Schlichtmann",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Werner Hemmert",
+    "dept": "CE",
+    "inst": [
+      "MIRMI",
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Wolfgang Kellerer",
+    "dept": "CE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Distributed & Mobile Computing",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Wolfgang Utschick",
+    "dept": "CE",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.sc. ETH Zürich Angela Schöllig",
+    "dept": "CE",
+    "inst": [
+      "MIRMI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.sc. ETH Zürich Reinhard Heckel",
+    "dept": "CE",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.sc. tech. Gerhard Kramer",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Chunyang Chen",
+    "dept": "CS",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Alexander Fraser",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Alexander Pretschner",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Andrea Stocco",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Burkhard Rost",
+    "dept": "CS",
+    "inst": [
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Human-centered Engineering",
+        "group_dept": "Unknown"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Daniel Cremers",
+    "dept": "CS",
+    "inst": [
+      "MIRMI",
+      "MDSI",
+      "MIBE",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Felix Brandt",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Harald Räcke",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Helmut Seidl",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Ingo Weber",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Jens Großklags",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Julia Schnabel",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MIBE",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Julien Gagneur",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Martin Bichler",
+    "dept": "CS",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Michael Bader",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Niki Kilbertus",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Ph.D. Angela Dai",
+    "dept": "CS",
+    "inst": [
+      "MIRMI",
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Ph.D. Debarghya Ghoshdastidar",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Ali Sunyaev",
+    "dept": "CS",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Christian Mendl",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Felix Dietrich",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Florian Bruse",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Florian Matthes",
+    "dept": "CS",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Human-centered Engineering",
+        "group_dept": "Unknown"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. habil. Hans-Joachim Bungartz",
+    "dept": "CS",
+    "inst": [
+      "MUDS"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Hartwig Anzt",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Luise Pufahl",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Stefanie Rinderle-Ma",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Stephan Günnemann",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Susanne Albers",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Thomas Neumann",
+    "dept": "CS",
+    "inst": [
+      "MUDS"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Viktor Leis",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Rüdiger Westermann",
+    "dept": "CS",
+    "inst": [
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Seyed-Jalal Etesami",
+    "dept": "CS",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Stefan Bauer",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Stefan Wagner",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Stefanie Jegelka",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Stephan Krusche",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Human-centered Engineering",
+        "group_dept": "Unknown"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. techn. Johanna Pirker",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Zeynep Akata-Schulz",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. habil. Mario Trapp",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Maribel-Acosta Deibe",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Matthias Nießner",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Nils Thürey",
+    "dept": "CS",
+    "inst": [
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Pramod Bhatotia",
+    "dept": "CS",
+    "inst": [
+      "MIRMI",
+      "MDSI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.sc. ETH Zürich Jana-Giceva Makreshanska",
+    "dept": "CS",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Francisco-Javier Esparza-Estaun",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Ph.D. Bernd Finkbeiner",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Ph.D. Matthias Grabmair",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Ph.D. Nassir Navab",
+    "dept": "CS",
+    "inst": [
+      "MIRMI",
+      "MDSI",
+      "MIBE",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Ph.D. Stephen Kobourov",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Univ.-Prof. Dr. Daniel Rückert",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MIBE",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Berna-Özkale Edelmann",
+    "dept": "EE",
+    "inst": [
+      "MIRMI",
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Ghulam Destgeer",
+    "dept": "EE",
+    "inst": [
+      "MIBE"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Kristen Kozielski",
+    "dept": "EE",
+    "inst": [
+      "MIRMI",
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Bernhard Wolfrum",
+    "dept": "EE",
+    "inst": [
+      "MIRMI",
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Eva Weig",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Oliver Hayden",
+    "dept": "EE",
+    "inst": [
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Amelie Hagelauer",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Benjamin Nuß",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Can Dincer",
+    "dept": "EE",
+    "inst": [
+      "MIBE"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Jia Chen",
+    "dept": "EE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Ralf Brederlow",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Caroline Lasser",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Christian Kühn",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Claudia Scheimbauer",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Eric Sonnendrücker",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Fabian Theis",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MIBE",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Felix Krahmer",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Gero Friesecke",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Johannes Müller",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Lorenz Panny",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Marco Cicalese",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Massimo Fornasier",
+    "dept": "MATH",
+    "inst": [
+      "MIRMI",
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Michael-Marc Wolf",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Noam-Berger Steiger",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Andreas Schulz",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Andreas Wiese",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Barbara Wohlmuth",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Boris Vexler",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Christian Liedtke",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Christina Kuttler",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Christoph Knochenhauer",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Daniel Matthes",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Deniz Kus",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Elisabeth Ullmann",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. habil. Folkmar Bornemann",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. habil. Gregor Kemper",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. habil. Nina Gantert",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. habil. Tim-Nikolai Hoffmann",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Johannes Zimmer",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Jürgen Richter-Gebert",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Matthias Scherer",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Michael Ulbrich",
+    "dept": "MATH",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Murad Alim",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Oliver Junge",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Stefan Weltge",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Ulrich Bauer",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Robert König",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Rudi Zagst",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Silke Rolles",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Simone Warzel",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Suvrit Sra",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.sc.nat. Violetta Weger",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Ph.D. Donna Ankerst",
+    "dept": "MATH",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Ph.D. Mathias Drton",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "website": ""
   }
 ]
