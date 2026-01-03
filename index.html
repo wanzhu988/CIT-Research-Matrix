@@ -210,19 +210,33 @@
                     const s = deptStyle[name];
                     node.symbolSize = 80;
                     node.itemStyle = { color: s.color, borderColor: s.border, borderWidth: 2 };
-                    node.label = { show: true, position: 'inside', fontSize: 16, fontWeight: 'bold', color: s.labelColor };
+                    node.label = { show: true, position: 'inside', fontSize: 16, fontWeight: 'bold', color: s.labelColor, formatter: '{b}' };
+                    node.category = 0; // 院系类别
+                    node.value = 100; // 高权重，增加吸引力（不显示）
                 } 
                 else if (type === 'prof') {
                     const s = deptStyle[parentDept] || { color: '#999' };
                     node.symbolSize = 20;
                     node.itemStyle = { color: s.color, borderColor: s.border, borderWidth: 1 };
-                    node.label = { show: true, position: 'right', formatter: name.split(' ').pop(), color: "#666" };
+                    node.label = { show: true, position: 'right', formatter: function(params) { return params.data.name.split(' ').pop(); }, color: "#666" };
+                    node.category = 1; // 教授类别
+                    node.value = 20; // 权重（不显示）
                 }
                 else if (type === 'inst' || type === 'group') {
                     const s = styles[type];
                     node.symbolSize = type === 'inst' ? 45 : 35; // 机构略大，研究组略小
-                    node.itemStyle = { color: s.color, borderColor: s.border, borderWidth: 2 };
-                    node.label = { show: true, fontSize: 10, width: 80, overflow: 'break', color: "#333" };
+                    
+                    // Research Group 根据所属院系设置边框颜色
+                    if (type === 'group' && parentDept && deptStyle[parentDept]) {
+                        const deptBorderColor = deptStyle[parentDept].border;
+                        node.itemStyle = { color: s.color, borderColor: deptBorderColor, borderWidth: 2 };
+                    } else {
+                        node.itemStyle = { color: s.color, borderColor: s.border, borderWidth: 2 };
+                    }
+                    
+                    node.label = { show: true, fontSize: 10, width: 80, overflow: 'break', color: "#333", formatter: '{b}' };
+                    node.category = type === 'inst' ? 2 : 3; // 机构和研究组分别归类
+                    node.value = 10; // 权重（不显示）
                 }
                 
                 nodes.push(node);
@@ -239,15 +253,22 @@
 
                 // 2.2 添加院系节点 (作为中心)
                 addNode(prof.dept, prof.dept, 'dept', prof.dept);
-                links.push({ source: prof.name, target: prof.dept, lineStyle: { color: '#ccc', width: 2, opacity: 0.3 } });
+                links.push({ 
+                    source: prof.name, 
+                    target: prof.dept, 
+                    lineStyle: { color: '#ccc', width: 2, opacity: 0.3 },
+                    length: 80  // 教授到院系的距离短
+                });
 
                 // 2.3 添加机构 (如果开关开启)
                 if (state.showInst && prof.inst) {
                     prof.inst.forEach(instName => {
                         addNode("INST_" + instName, instName, 'inst', null); // 加上前缀防止重名
                         links.push({ 
-                            source: prof.name, target: "INST_" + instName, 
-                            lineStyle: { color: styles.inst.color, type: 'dashed', width: 1, opacity: 0.8 } 
+                            source: prof.name, 
+                            target: "INST_" + instName, 
+                            lineStyle: { color: styles.inst.color, type: 'dashed', width: 1, opacity: 0.8 },
+                            length: 250  // 教授到机构的距离长，推到外圈
                         });
                     });
                 }
@@ -255,11 +276,18 @@
                 // 2.4 添加研究组 (如果开关开启) [新增逻辑]
                 if (state.showGroup && prof.research_group) {
                     prof.research_group.forEach(group => {
+                        // 忽略 group_dept 为 CE 的 Neuro-Engineering
+                        if (group.group_name === "Neuro-Engineering" && group.group_dept === "CE") {
+                            return; // 跳过这个组
+                        }
+                        
                         const groupId = "GRP_" + group.group_name;
                         addNode(groupId, group.group_name, 'group', group.group_dept);
                         links.push({ 
-                            source: prof.name, target: groupId, 
-                            lineStyle: { color: styles.group.color, type: 'dotted', width: 1.5, opacity: 0.8 } 
+                            source: prof.name, 
+                            target: groupId, 
+                            lineStyle: { color: styles.group.color, type: 'dotted', width: 1.5, opacity: 0.8 },
+                            length: 220  // 教授到研究组的距离长，推到外圈
                         });
                     });
                 }
@@ -273,16 +301,22 @@
                     layout: 'force',
                     data: nodes,
                     links: links,
+                    categories: [
+                        { name: '院系 (Department)' },
+                        { name: '教授 (Professor)' },
+                        { name: '机构 (Institute)' },
+                        { name: '研究组 (Research Group)' }
+                    ],
                     roam: true,
-                    zoom: 0.7,
+                    zoom: 0.6,
                     label: { position: 'right' },
                     lineStyle: { curveness: 0.2 },
-                    // 物理引擎参数微调，保证 Research Group 和 Inst 散开
+                    // 物理引擎参数优化：让院系聚中心，机构/研究组散外圈
                     force: {
-                        repulsion: 500,
-                        gravity: 0.05,
-                        edgeLength: [50, 250],
-                        friction: 0.5,
+                        repulsion: 800,        // 增大斥力，防止挤在一起
+                        gravity: 0.03,         // 降低重力，减少向中心聚集
+                        edgeLength: [80, 250], // 扩大边长范围，允许更远距离
+                        friction: 0.4,         // 降低摩擦力，加速布局收敛
                         layoutAnimation: true,
                         preventOverlap: true
                     }
@@ -329,7 +363,13 @@
                     members = globalRawData.filter(p => p.inst && p.inst.includes(data.name));
                 } else if (data.nodeType === 'group') {
                     members = globalRawData.filter(p => 
-                        p.research_group && p.research_group.some(g => g.group_name === data.name)
+                        p.research_group && p.research_group.some(g => {
+                            // 忽略 CE 的 Neuro-Engineering
+                            if (g.group_name === "Neuro-Engineering" && g.group_dept === "CE") {
+                                return false;
+                            }
+                            return g.group_name === data.name;
+                        })
                     );
                 }
 
@@ -385,16 +425,23 @@
 
                 // D. 所属研究组 (Research Groups)
                 if (p.research_group && p.research_group.length > 0) {
-                    html += `<div class="detail-section"><strong>RESEARCH GROUPS</strong><ul class="detail-list">`;
-                    p.research_group.forEach(g => {
-                        // 获取研究组所属院系的颜色
-                        const gDs = deptStyle[g.group_dept] || { color: '#f0f0f0', labelColor: '#666', border: '#ddd' };
-                        const gBadgeStyle = `background:${gDs.color}; color:${gDs.labelColor}; border:1px solid ${gDs.border}; font-size:10px; padding:1px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;`;
-                        
-                        // 显示格式: 组名 + [院系小标签]
-                        html += `<li><span style="${gBadgeStyle}">${g.group_dept}</span> ${g.group_name}</li>`;
-                    });
-                    html += `</ul></div>`;
+                    // 先过滤掉 CE 的 Neuro-Engineering
+                    const filteredGroups = p.research_group.filter(g => 
+                        !(g.group_name === "Neuro-Engineering" && g.group_dept === "CE")
+                    );
+                    
+                    if (filteredGroups.length > 0) {
+                        html += `<div class="detail-section"><strong>RESEARCH GROUPS</strong><ul class="detail-list">`;
+                        filteredGroups.forEach(g => {
+                            // 获取研究组所属院系的颜色
+                            const gDs = deptStyle[g.group_dept] || { color: '#f0f0f0', labelColor: '#666', border: '#ddd' };
+                            const gBadgeStyle = `background:${gDs.color}; color:${gDs.labelColor}; border:1px solid ${gDs.border}; font-size:10px; padding:1px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;`;
+                            
+                            // 显示格式: 组名 + [院系小标签]
+                            html += `<li><span style="${gBadgeStyle}">${g.group_dept}</span> ${g.group_name}</li>`;
+                        });
+                        html += `</ul></div>`;
+                    }
                 }
 
                 // 4. 填充内容并打开

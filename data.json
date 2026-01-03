@@ -398,7 +398,7 @@
       },
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       },
       {
         "group_name": "Distributed & Mobile Computing",
@@ -559,7 +559,7 @@
       },
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       },
       {
         "group_name": "Neuro-Engineering",
@@ -589,7 +589,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       },
       {
         "group_name": "Embedded and Cyber-physical Systems",
@@ -855,7 +855,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       }
     ],
     "website": ""
@@ -1027,7 +1027,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       }
     ],
     "website": ""
@@ -1149,7 +1149,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       }
     ],
     "website": ""
