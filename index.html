@@ -32,6 +32,104 @@
         /* 按钮的具体颜色 (通过JS动态控制，但这里写基础类) */
         .btn-dept { color: #fff; }
         .btn-type { color: #fff; }
+        
+        /* --- 下拉菜单样式 --- */
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-btn {
+            padding: 6px 16px; border-radius: 20px; cursor: pointer;
+            font-size: 13px; font-weight: 600; user-select: none;
+            transition: all 0.2s; border: 2px solid transparent;
+            background-color: #26c6da; color: #fff;
+            display: flex; align-items: center; gap: 5px;
+        }
+        .dropdown-btn:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .dropdown-btn::after {
+            content: '▼';
+            font-size: 10px;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            min-width: 320px;
+            max-width: 400px;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+        }
+        .dropdown-menu::-webkit-scrollbar {
+            width: 8px;
+        }
+        .dropdown-menu::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        .dropdown-menu::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+        .dropdown-menu::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+        .dropdown-menu.show {
+            display: block;
+        }
+        .dropdown-header {
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .dropdown-action {
+            font-size: 11px;
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .dropdown-action:hover {
+            color: #0056b3;
+        }
+        .dropdown-item {
+            padding: 8px 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            transition: background 0.2s;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+        .dropdown-item:hover {
+            background: #f9f9f9;
+        }
+        .dropdown-checkbox {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+        .dropdown-label {
+            flex: 1;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
 
         /* --- 主容器 (下移以避开顶部栏) --- */
         #main { width: 100%; height: calc(100vh - 60px); margin-top: 60px; }
@@ -98,7 +196,20 @@
 
         <div class="filter-group" id="typeFilters">
             <div class="filter-btn btn-type active" data-type="inst" style="background-color: #fcca00; color: #333;">Institutes</div>
-            <div class="filter-btn btn-type active" data-type="group" style="background-color: #26c6da; color: #fff;">Research Groups</div>
+            <div class="dropdown-container">
+                <div class="dropdown-btn" id="groupDropdownBtn">
+                    Research Groups
+                </div>
+                <div class="dropdown-menu" id="groupDropdownMenu">
+                    <div class="dropdown-header">
+                        <span class="dropdown-action" id="selectAllGroups">Select All</span>
+                        <span class="dropdown-action" id="deselectAllGroups">Deselect All</span>
+                    </div>
+                    <div id="groupDropdownItems">
+                        <!-- 动态生成 -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -127,8 +238,10 @@
         const state = {
             activeDepts: new Set(['CS', 'CE', 'EE', 'MATH']), // 默认全选
             showInst: true,
-            showGroup: true
+            activeGroups: new Set() // 选中的研究组，空表示全选
         };
+        
+        let allGroups = []; // 存储所有研究组及其所属院系 [{name, dept}, ...]
 
         var chartDom = document.getElementById('main');
         var myChart = echarts.init(chartDom);
@@ -173,9 +286,98 @@
             } else {
                 const type = $(this).data('type');
                 if (type === 'inst') state.showInst = isActive;
-                if (type === 'group') state.showGroup = isActive;
             }
             updateGraph(); // 触发重绘
+        });
+
+        // --- Research Groups 下拉菜单逻辑 ---
+        // 初始化研究组列表
+        function initializeGroupDropdown() {
+            // 提取所有独特的研究组及其所属院系
+            const groupMap = new Map(); // key: groupName, value: dept
+            globalRawData.forEach(prof => {
+                if (prof.research_group) {
+                    prof.research_group.forEach(g => {
+                        // 忽略 CE 的 Neuro-Engineering
+                        if (g.group_name === "Neuro-Engineering" && g.group_dept === "CE") {
+                            return;
+                        }
+                        if (!groupMap.has(g.group_name)) {
+                            groupMap.set(g.group_name, g.group_dept);
+                        }
+                    });
+                }
+            });
+            
+            // 转换为数组并排序
+            allGroups = Array.from(groupMap.entries())
+                .map(([name, dept]) => ({ name, dept }))
+                .sort((a, b) => a.name.localeCompare(b.name));
+            
+            // 默认全选
+            state.activeGroups = new Set(allGroups.map(g => g.name));
+            
+            // 生成下拉菜单项
+            const container = $('#groupDropdownItems');
+            container.empty();
+            allGroups.forEach((group, index) => {
+                const deptColor = deptStyle[group.dept] || { color: '#f0f0f0', labelColor: '#666' };
+                const safeId = `group_${index}`; // 使用索引作为 ID，避免特殊字符
+                const item = $(`
+                    <div class="dropdown-item">
+                        <input type="checkbox" class="dropdown-checkbox" id="${safeId}" 
+                               data-group="${group.name}" checked>
+                        <label class="dropdown-label" for="${safeId}" 
+                               style="background-color: ${deptColor.color}; color: ${deptColor.labelColor};">
+                            ${group.name}
+                        </label>
+                    </div>
+                `);
+                container.append(item);
+            });
+            
+            // 绑定复选框事件
+            $('.dropdown-checkbox').on('change', function() {
+                const groupName = $(this).data('group');
+                if ($(this).is(':checked')) {
+                    state.activeGroups.add(groupName);
+                } else {
+                    state.activeGroups.delete(groupName);
+                }
+                updateGraph();
+            });
+        }
+        
+        // 切换下拉菜单显示
+        $('#groupDropdownBtn').on('click', function(e) {
+            e.stopPropagation();
+            $('#groupDropdownMenu').toggleClass('show');
+        });
+        
+        // 防止点击菜单内部时关闭
+        $('#groupDropdownMenu').on('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // 点击其他地方关闭下拉菜单
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.dropdown-container').length) {
+                $('#groupDropdownMenu').removeClass('show');
+            }
+        });
+        
+        // Select All
+        $('#selectAllGroups').on('click', function() {
+            allGroups.forEach(g => state.activeGroups.add(g.name));
+            $('.dropdown-checkbox').prop('checked', true);
+            updateGraph();
+        });
+        
+        // Deselect All
+        $('#deselectAllGroups').on('click', function() {
+            state.activeGroups.clear();
+            $('.dropdown-checkbox').prop('checked', false);
+            updateGraph();
         });
 
         function closeDrawer() { $('#infoDrawer').removeClass('open'); }
@@ -191,6 +393,7 @@
         $.getJSON('data.json', function (rawData) {
             globalRawData = rawData;
             myChart.hideLoading();
+            initializeGroupDropdown(); // 初始化研究组下拉菜单
             updateGraph(); // 初始化绘制
         }).fail(function(){ alert("Error loading json"); });
 
@@ -273,12 +476,17 @@
                     });
                 }
 
-                // 2.4 添加研究组 (如果开关开启) [新增逻辑]
-                if (state.showGroup && prof.research_group) {
+                // 2.4 添加研究组 (根据选中状态筛选)
+                if (prof.research_group) {
                     prof.research_group.forEach(group => {
                         // 忽略 group_dept 为 CE 的 Neuro-Engineering
                         if (group.group_name === "Neuro-Engineering" && group.group_dept === "CE") {
                             return; // 跳过这个组
+                        }
+                        
+                        // 检查该研究组是否被选中
+                        if (!state.activeGroups.has(group.group_name)) {
+                            return; // 未选中，跳过
                         }
                         
                         const groupId = "GRP_" + group.group_name;
