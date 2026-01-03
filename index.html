@@ -109,10 +109,6 @@
             gap: 8px;
             font-size: 12px;
             transition: background 0.2s;
-            border-bottom: 1px solid #f5f5f5;
-        }
-        .dropdown-item:last-child {
-            border-bottom: none;
         }
         .dropdown-item:hover {
             background: #f9f9f9;
@@ -129,6 +125,21 @@
             border-radius: 4px;
             font-weight: 500;
             border: 1px solid rgba(0,0,0,0.1);
+        }
+        .dropdown-dept-divider {
+            padding: 10px 15px 6px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #888;
+            background: linear-gradient(to bottom, #fafafa, #f5f5f5);
+            border-top: 2px solid #e8e8e8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+        .dropdown-dept-divider:first-child {
+            border-top: none;
+            margin-top: 0;
         }
 
         /* --- 主容器 (下移以避开顶部栏) --- */
@@ -309,18 +320,41 @@
                 }
             });
             
-            // 转换为数组并排序
+            // 转换为数组并排序：先按院系分组，再按名称排序
+            const deptOrder = ['CS', 'CE', 'EE', 'MATH', 'Unknown']; // 院系顺序
             allGroups = Array.from(groupMap.entries())
                 .map(([name, dept]) => ({ name, dept }))
-                .sort((a, b) => a.name.localeCompare(b.name));
+                .sort((a, b) => {
+                    // 先按院系排序
+                    const deptIndexA = deptOrder.indexOf(a.dept);
+                    const deptIndexB = deptOrder.indexOf(b.dept);
+                    const orderA = deptIndexA === -1 ? 999 : deptIndexA;
+                    const orderB = deptIndexB === -1 ? 999 : deptIndexB;
+                    
+                    if (orderA !== orderB) {
+                        return orderA - orderB;
+                    }
+                    // 同一院系内按名称排序
+                    return a.name.localeCompare(b.name);
+                });
             
             // 默认全选
             state.activeGroups = new Set(allGroups.map(g => g.name));
             
-            // 生成下拉菜单项
+            // 生成下拉菜单项（带院系分隔符）
             const container = $('#groupDropdownItems');
             container.empty();
+            let lastDept = null;
+            
             allGroups.forEach((group, index) => {
+                // 如果是新的院系，添加分隔符
+                if (group.dept !== lastDept) {
+                    const deptName = group.dept === 'Unknown' ? 'Other' : group.dept;
+                    const divider = $(`<div class="dropdown-dept-divider">${deptName} Department</div>`);
+                    container.append(divider);
+                    lastDept = group.dept;
+                }
+                
                 const deptColor = deptStyle[group.dept] || { color: '#f0f0f0', labelColor: '#666' };
                 const safeId = `group_${index}`; // 使用索引作为 ID，避免特殊字符
                 const item = $(`
