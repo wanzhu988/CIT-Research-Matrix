@@ -206,7 +206,20 @@
         <div class="divider"></div>
 
         <div class="filter-group" id="typeFilters">
-            <div class="filter-btn btn-type active" data-type="inst" style="background-color: #fcca00; color: #333;">Institutes</div>
+            <div class="dropdown-container">
+                <div class="dropdown-btn" id="instDropdownBtn" style="background-color: #fcca00; color: #333;">
+                    Institutes
+                </div>
+                <div class="dropdown-menu" id="instDropdownMenu">
+                    <div class="dropdown-header">
+                        <span class="dropdown-action" id="selectAllInstitutes">Select All</span>
+                        <span class="dropdown-action" id="deselectAllInstitutes">Deselect All</span>
+                    </div>
+                    <div id="instDropdownItems">
+                        <!-- 动态生成 -->
+                    </div>
+                </div>
+            </div>
             <div class="dropdown-container">
                 <div class="dropdown-btn" id="groupDropdownBtn">
                     Research Groups
@@ -248,11 +261,12 @@
         // --- 全局状态管理 ---
         const state = {
             activeDepts: new Set(['CS', 'CE', 'EE', 'MATH']), // 默认全选
-            showInst: true,
-            activeGroups: new Set() // 选中的研究组，空表示全选
+            activeInstitutes: new Set(), // 选中的机构
+            activeGroups: new Set() // 选中的研究组
         };
         
         let allGroups = []; // 存储所有研究组及其所属院系 [{name, dept}, ...]
+        let allInstitutes = []; // 存储所有机构 [{name}, ...]
 
         var chartDom = document.getElementById('main');
         var myChart = echarts.init(chartDom);
@@ -294,11 +308,8 @@
             if ($(this).hasClass('btn-dept')) {
                 const key = $(this).data('key');
                 isActive ? state.activeDepts.add(key) : state.activeDepts.delete(key);
-            } else {
-                const type = $(this).data('type');
-                if (type === 'inst') state.showInst = isActive;
+                updateGraph(); // 触发重绘
             }
-            updateGraph(); // 触发重绘
         });
 
         // --- Research Groups 下拉菜单逻辑 ---
@@ -397,20 +408,96 @@
         $(document).on('click', function(e) {
             if (!$(e.target).closest('.dropdown-container').length) {
                 $('#groupDropdownMenu').removeClass('show');
+                $('#instDropdownMenu').removeClass('show');
             }
         });
         
-        // Select All
+        // Select All Groups
         $('#selectAllGroups').on('click', function() {
             allGroups.forEach(g => state.activeGroups.add(g.name));
-            $('.dropdown-checkbox').prop('checked', true);
+            $('#groupDropdownMenu .dropdown-checkbox').prop('checked', true);
             updateGraph();
         });
         
         // Deselect All
         $('#deselectAllGroups').on('click', function() {
             state.activeGroups.clear();
-            $('.dropdown-checkbox').prop('checked', false);
+            $('#groupDropdownMenu .dropdown-checkbox').prop('checked', false);
+            updateGraph();
+        });
+
+        // --- Institutes 下拉菜单逻辑 ---
+        // 初始化机构列表
+        function initializeInstituteDropdown() {
+            // 提取所有独特的机构
+            const instSet = new Set();
+            globalRawData.forEach(prof => {
+                if (prof.inst && prof.inst.length > 0) {
+                    prof.inst.forEach(inst => instSet.add(inst));
+                }
+            });
+            
+            // 转换为数组并排序
+            allInstitutes = Array.from(instSet)
+                .map(name => ({ name }))
+                .sort((a, b) => a.name.localeCompare(b.name));
+            
+            // 默认全选
+            state.activeInstitutes = new Set(allInstitutes.map(i => i.name));
+            
+            // 生成下拉菜单项
+            const container = $('#instDropdownItems');
+            container.empty();
+            
+            allInstitutes.forEach((inst, index) => {
+                const safeId = `inst_${index}`;
+                const item = $(`
+                    <div class="dropdown-item">
+                        <input type="checkbox" class="dropdown-checkbox inst-checkbox" id="${safeId}" 
+                               data-inst="${inst.name}" checked>
+                        <label class="dropdown-label" for="${safeId}" 
+                               style="background-color: #fcca00; color: #333;">
+                            ${inst.name}
+                        </label>
+                    </div>
+                `);
+                container.append(item);
+            });
+            
+            // 绑定复选框事件
+            $(document).on('change', '.inst-checkbox', function() {
+                const instName = $(this).data('inst');
+                if ($(this).is(':checked')) {
+                    state.activeInstitutes.add(instName);
+                } else {
+                    state.activeInstitutes.delete(instName);
+                }
+                updateGraph();
+            });
+        }
+        
+        // 切换下拉菜单显示
+        $('#instDropdownBtn').on('click', function(e) {
+            e.stopPropagation();
+            $('#instDropdownMenu').toggleClass('show');
+        });
+        
+        // 防止点击菜单内部时关闭
+        $('#instDropdownMenu').on('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Select All Institutes
+        $('#selectAllInstitutes').on('click', function() {
+            allInstitutes.forEach(i => state.activeInstitutes.add(i.name));
+            $('#instDropdownMenu .inst-checkbox').prop('checked', true);
+            updateGraph();
+        });
+        
+        // Deselect All Institutes
+        $('#deselectAllInstitutes').on('click', function() {
+            state.activeInstitutes.clear();
+            $('#instDropdownMenu .inst-checkbox').prop('checked', false);
             updateGraph();
         });
 
@@ -427,6 +514,7 @@
         $.getJSON('data.json', function (rawData) {
             globalRawData = rawData;
             myChart.hideLoading();
+            initializeInstituteDropdown(); // 初始化机构下拉菜单
             initializeGroupDropdown(); // 初始化研究组下拉菜单
             updateGraph(); // 初始化绘制
         }).fail(function(){ alert("Error loading json"); });
@@ -497,9 +585,14 @@
                     length: 80  // 教授到院系的距离短
                 });
 
-                // 2.3 添加机构 (如果开关开启)
-                if (state.showInst && prof.inst) {
+                // 2.3 添加机构 (根据选中状态筛选)
+                if (prof.inst) {
                     prof.inst.forEach(instName => {
+                        // 检查该机构是否被选中
+                        if (!state.activeInstitutes.has(instName)) {
+                            return; // 未选中，跳过
+                        }
+                        
                         addNode("INST_" + instName, instName, 'inst', null); // 加上前缀防止重名
                         links.push({ 
                             source: prof.name, 
