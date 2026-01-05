@@ -630,7 +630,16 @@
 
             // 3. 配置 Option
             option = {
-                tooltip: { trigger: 'item' },
+                tooltip: { 
+                    trigger: 'item',
+                    formatter: function(params) {
+                        // 只显示节点名称，不显示 value
+                        if (params.dataType === 'node') {
+                            return params.data.name || '';
+                        }
+                        return params.name || '';
+                    }
+                },
                 series: [{
                     type: 'graph',
                     layout: 'force',
