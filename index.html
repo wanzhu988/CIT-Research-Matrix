@@ -573,6 +573,29 @@
                 // 筛选条件 A: 教授所属院系必须是被选中的
                 if (!state.activeDepts.has(prof.dept)) return;
 
+                // 筛选条件 B: 如果选中了机构，教授必须属于至少一个选中的机构
+                const hasSelectedInst = state.activeInstitutes.size > 0;
+                if (hasSelectedInst) {
+                    const profInsts = prof.inst || [];
+                    const belongsToSelectedInst = profInsts.some(inst => state.activeInstitutes.has(inst));
+                    if (!belongsToSelectedInst) return; // 不属于任何选中的机构，跳过
+                }
+
+                // 筛选条件 C: 如果选中了研究组，教授必须属于至少一个选中的研究组
+                const hasSelectedGroup = state.activeGroups.size > 0;
+                if (hasSelectedGroup) {
+                    const profGroups = prof.research_group || [];
+                    const belongsToSelectedGroup = profGroups.some(g => {
+                        // 忽略 CE 的 Neuro-Engineering
+                        if (g.group_name === "Neuro-Engineering" && g.group_dept === "CE") {
+                            return false;
+                        }
+                        return state.activeGroups.has(g.group_name);
+                    });
+                    if (!belongsToSelectedGroup) return; // 不属于任何选中的研究组，跳过
+                }
+
+                // 只有同时满足所有条件，才添加教授节点
                 // 2.1 添加教授节点
                 addNode(prof.name, prof.name, 'prof', prof.dept);
 
@@ -585,10 +608,10 @@
                     length: 80  // 教授到院系的距离短
                 });
 
-                // 2.3 添加机构 (根据选中状态筛选)
+                // 2.3 添加机构 (只添加选中的机构)
                 if (prof.inst) {
                     prof.inst.forEach(instName => {
-                        // 检查该机构是否被选中
+                        // 只添加被选中的机构
                         if (!state.activeInstitutes.has(instName)) {
                             return; // 未选中，跳过
                         }
@@ -603,7 +626,7 @@
                     });
                 }
 
-                // 2.4 添加研究组 (根据选中状态筛选)
+                // 2.4 添加研究组 (只添加选中的研究组)
                 if (prof.research_group) {
                     prof.research_group.forEach(group => {
                         // 忽略 group_dept 为 CE 的 Neuro-Engineering
@@ -611,7 +634,7 @@
                             return; // 跳过这个组
                         }
                         
-                        // 检查该研究组是否被选中
+                        // 只添加被选中的研究组
                         if (!state.activeGroups.has(group.group_name)) {
                             return; // 未选中，跳过
                         }
