@@ -234,6 +234,20 @@
                     </div>
                 </div>
             </div>
+            <div class="dropdown-container">
+                <div class="dropdown-btn" id="collabDropdownBtn" style="background-color: #9c27b0; color: #fff;">
+                    Collaborations
+                </div>
+                <div class="dropdown-menu" id="collabDropdownMenu">
+                    <div class="dropdown-header">
+                        <span class="dropdown-action" id="selectAllCollaborations">Select All</span>
+                        <span class="dropdown-action" id="deselectAllCollaborations">Deselect All</span>
+                    </div>
+                    <div id="collabDropdownItems">
+                        <!-- 动态生成 -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -262,11 +276,13 @@
         const state = {
             activeDepts: new Set(['CS', 'CE', 'EE', 'MATH']), // 默认全选
             activeInstitutes: new Set(), // 选中的机构
-            activeGroups: new Set() // 选中的研究组
+            activeGroups: new Set(), // 选中的研究组
+            activeCollaborations: new Set() // 选中的合作机构
         };
         
         let allGroups = []; // 存储所有研究组及其所属院系 [{name, dept}, ...]
         let allInstitutes = []; // 存储所有机构 [{name}, ...]
+        let allCollaborations = []; // 存储所有合作机构 [{name}, ...]
 
         var chartDom = document.getElementById('main');
         var myChart = echarts.init(chartDom);
@@ -295,8 +311,12 @@
         };
         const styles = {
             inst:  { color: "#fcca00", border: "#f57f17", label: "#333" }, // 机构：黄色
-            group: { color: "#26c6da", border: "#0097a7", label: "#fff" }  // 研究组：青色
+            group: { color: "#26c6da", border: "#0097a7", label: "#fff" },  // 研究组：青色
+            collaboration: { color: "#9c27b0", border: "#7b1fa2", label: "#fff" }  // 合作机构：紫色
         };
+        
+        // 定义哪些机构属于 collaborations
+        const collaborationInstitutes = new Set(['MUDS', 'MCML']);
 
 
 
@@ -409,6 +429,7 @@
             if (!$(e.target).closest('.dropdown-container').length) {
                 $('#groupDropdownMenu').removeClass('show');
                 $('#instDropdownMenu').removeClass('show');
+                $('#collabDropdownMenu').removeClass('show');
             }
         });
         
@@ -429,11 +450,16 @@
         // --- Institutes 下拉菜单逻辑 ---
         // 初始化机构列表
         function initializeInstituteDropdown() {
-            // 提取所有独特的机构
+            // 提取所有独特的机构（排除 collaborations）
             const instSet = new Set();
             globalRawData.forEach(prof => {
                 if (prof.inst && prof.inst.length > 0) {
-                    prof.inst.forEach(inst => instSet.add(inst));
+                    prof.inst.forEach(inst => {
+                        // 排除 MUDS 和 MCML（它们属于 collaborations）
+                        if (!collaborationInstitutes.has(inst)) {
+                            instSet.add(inst);
+                        }
+                    });
                 }
             });
             
@@ -501,6 +527,86 @@
             updateGraph();
         });
 
+        // --- Collaborations 下拉菜单逻辑 ---
+        // 初始化合作机构列表
+        function initializeCollaborationDropdown() {
+            // 提取所有独特的合作机构（MUDS 和 MCML）
+            const collabSet = new Set();
+            globalRawData.forEach(prof => {
+                if (prof.inst && prof.inst.length > 0) {
+                    prof.inst.forEach(inst => {
+                        // 只包含 collaborations
+                        if (collaborationInstitutes.has(inst)) {
+                            collabSet.add(inst);
+                        }
+                    });
+                }
+            });
+            
+            // 转换为数组并排序
+            allCollaborations = Array.from(collabSet)
+                .map(name => ({ name }))
+                .sort((a, b) => a.name.localeCompare(b.name));
+            
+            // 默认全选
+            state.activeCollaborations = new Set(allCollaborations.map(c => c.name));
+            
+            // 生成下拉菜单项
+            const container = $('#collabDropdownItems');
+            container.empty();
+            
+            allCollaborations.forEach((collab, index) => {
+                const safeId = `collab_${index}`;
+                const item = $(`
+                    <div class="dropdown-item">
+                        <input type="checkbox" class="dropdown-checkbox collab-checkbox" id="${safeId}" 
+                               data-collab="${collab.name}" checked>
+                        <label class="dropdown-label" for="${safeId}" 
+                               style="background-color: #9c27b0; color: #fff;">
+                            ${collab.name}
+                        </label>
+                    </div>
+                `);
+                container.append(item);
+            });
+            
+            // 绑定复选框事件
+            $(document).on('change', '.collab-checkbox', function() {
+                const collabName = $(this).data('collab');
+                if ($(this).is(':checked')) {
+                    state.activeCollaborations.add(collabName);
+                } else {
+                    state.activeCollaborations.delete(collabName);
+                }
+                updateGraph();
+            });
+        }
+        
+        // 切换下拉菜单显示
+        $('#collabDropdownBtn').on('click', function(e) {
+            e.stopPropagation();
+            $('#collabDropdownMenu').toggleClass('show');
+        });
+        
+        // 防止点击菜单内部时关闭
+        $('#collabDropdownMenu').on('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Select All Collaborations
+        $('#selectAllCollaborations').on('click', function() {
+            allCollaborations.forEach(c => state.activeCollaborations.add(c.name));
+            $('#collabDropdownMenu .collab-checkbox').prop('checked', true);
+            updateGraph();
+        });
+        
+        // Deselect All Collaborations
+        $('#deselectAllCollaborations').on('click', function() {
+            state.activeCollaborations.clear();
+            $('#collabDropdownMenu .collab-checkbox').prop('checked', false);
+            updateGraph();
+        });
+
         function closeDrawer() { $('#infoDrawer').removeClass('open'); }
 
         myChart.showLoading();
@@ -516,6 +622,7 @@
             myChart.hideLoading();
             initializeInstituteDropdown(); // 初始化机构下拉菜单
             initializeGroupDropdown(); // 初始化研究组下拉菜单
+            initializeCollaborationDropdown(); // 初始化合作机构下拉菜单
             updateGraph(); // 初始化绘制
         }).fail(function(){ alert("Error loading json"); });
 
@@ -547,9 +654,9 @@
                     node.category = 1; // 教授类别
                     node.value = 20; // 权重（不显示）
                 }
-                else if (type === 'inst' || type === 'group') {
+                else if (type === 'inst' || type === 'group' || type === 'collaboration') {
                     const s = styles[type];
-                    node.symbolSize = type === 'inst' ? 45 : 35; // 机构略大，研究组略小
+                    node.symbolSize = type === 'inst' ? 45 : (type === 'collaboration' ? 45 : 35); // 机构和合作机构略大，研究组略小
                     
                     // Research Group 根据所属院系设置边框颜色
                     if (type === 'group' && parentDept && deptStyle[parentDept]) {
@@ -559,8 +666,8 @@
                         node.itemStyle = { color: s.color, borderColor: s.border, borderWidth: 2 };
                     }
                     
-                    node.label = { show: true, fontSize: 10, width: 80, overflow: 'break', color: "#333", formatter: '{b}' };
-                    node.category = type === 'inst' ? 2 : 3; // 机构和研究组分别归类
+                    node.label = { show: true, fontSize: 10, width: 80, overflow: 'break', color: type === 'collaboration' ? "#fff" : "#333", formatter: '{b}' };
+                    node.category = type === 'inst' ? 2 : (type === 'group' ? 3 : 4); // 机构、研究组和合作机构分别归类
                     node.value = 10; // 权重（不显示）
                 }
                 
@@ -577,11 +684,23 @@
                 const hasSelectedInst = state.activeInstitutes.size > 0;
                 if (hasSelectedInst) {
                     const profInsts = prof.inst || [];
-                    const belongsToSelectedInst = profInsts.some(inst => state.activeInstitutes.has(inst));
+                    const belongsToSelectedInst = profInsts.some(inst => 
+                        state.activeInstitutes.has(inst) && !collaborationInstitutes.has(inst)
+                    );
                     if (!belongsToSelectedInst) return; // 不属于任何选中的机构，跳过
                 }
 
-                // 筛选条件 C: 如果选中了研究组，教授必须属于至少一个选中的研究组
+                // 筛选条件 C: 如果选中了合作机构，教授必须属于至少一个选中的合作机构
+                const hasSelectedCollab = state.activeCollaborations.size > 0;
+                if (hasSelectedCollab) {
+                    const profInsts = prof.inst || [];
+                    const belongsToSelectedCollab = profInsts.some(inst => 
+                        collaborationInstitutes.has(inst) && state.activeCollaborations.has(inst)
+                    );
+                    if (!belongsToSelectedCollab) return; // 不属于任何选中的合作机构，跳过
+                }
+
+                // 筛选条件 D: 如果选中了研究组，教授必须属于至少一个选中的研究组
                 const hasSelectedGroup = state.activeGroups.size > 0;
                 if (hasSelectedGroup) {
                     const profGroups = prof.research_group || [];
@@ -608,9 +727,14 @@
                     length: 80  // 教授到院系的距离短
                 });
 
-                // 2.3 添加机构 (只添加选中的机构)
+                // 2.3 添加机构 (只添加选中的机构，排除 collaborations)
                 if (prof.inst) {
                     prof.inst.forEach(instName => {
+                        // 如果是合作机构，跳过（在 2.4 中处理）
+                        if (collaborationInstitutes.has(instName)) {
+                            return;
+                        }
+                        
                         // 只添加被选中的机构
                         if (!state.activeInstitutes.has(instName)) {
                             return; // 未选中，跳过
@@ -622,6 +746,29 @@
                             target: "INST_" + instName, 
                             lineStyle: { color: styles.inst.color, type: 'dashed', width: 1, opacity: 0.8 },
                             length: 250  // 教授到机构的距离长，推到外圈
+                        });
+                    });
+                }
+
+                // 2.3.5 添加合作机构 (只添加选中的合作机构)
+                if (prof.inst) {
+                    prof.inst.forEach(instName => {
+                        // 只处理合作机构
+                        if (!collaborationInstitutes.has(instName)) {
+                            return;
+                        }
+                        
+                        // 只添加被选中的合作机构
+                        if (!state.activeCollaborations.has(instName)) {
+                            return; // 未选中，跳过
+                        }
+                        
+                        addNode("COLLAB_" + instName, instName, 'collaboration', null); // 加上前缀防止重名
+                        links.push({ 
+                            source: prof.name, 
+                            target: "COLLAB_" + instName, 
+                            lineStyle: { color: styles.collaboration.color, type: 'dashed', width: 1, opacity: 0.8 },
+                            length: 250  // 教授到合作机构的距离长，推到外圈
                         });
                     });
                 }
@@ -672,7 +819,8 @@
                         { name: '院系 (Department)' },
                         { name: '教授 (Professor)' },
                         { name: '机构 (Institute)' },
-                        { name: '研究组 (Research Group)' }
+                        { name: '研究组 (Research Group)' },
+                        { name: '合作机构 (Collaboration)' }
                     ],
                     roam: true,
                     zoom: 0.6,
@@ -717,8 +865,8 @@
             }
         }
 
-            // 情况 A: 点击的是 机构(inst)、研究组(group) 或 院系(dept) -> 显示成员列表
-            if (['inst', 'group', 'dept'].includes(data.nodeType)) {
+            // 情况 A: 点击的是 机构(inst)、合作机构(collaboration)、研究组(group) 或 院系(dept) -> 显示成员列表
+            if (['inst', 'collaboration', 'group', 'dept'].includes(data.nodeType)) {
                 
                 $('#drawerTitle').html(getTitleHtml(data.name));
                 let members = [];
@@ -727,6 +875,8 @@
                 if (data.nodeType === 'dept') {
                     members = globalRawData.filter(p => p.dept === data.name);
                 } else if (data.nodeType === 'inst') {
+                    members = globalRawData.filter(p => p.inst && p.inst.includes(data.name));
+                } else if (data.nodeType === 'collaboration') {
                     members = globalRawData.filter(p => p.inst && p.inst.includes(data.name));
                 } else if (data.nodeType === 'group') {
                     members = globalRawData.filter(p => 
@@ -783,10 +933,19 @@
                         <span style="${badgeStyle}">${p.dept}</span>
                     </div>`;
 
-                // C. 所属机构 (Institutes)
-                if (p.inst && p.inst.length > 0) {
+                // C. 所属机构 (Institutes) - 排除 collaborations
+                const regularInsts = p.inst ? p.inst.filter(i => !collaborationInstitutes.has(i)) : [];
+                if (regularInsts.length > 0) {
                     html += `<div class="detail-section"><strong>INSTITUTES</strong><ul class="detail-list">`;
-                    p.inst.forEach(i => html += `<li>${i}</li>`);
+                    regularInsts.forEach(i => html += `<li>${i}</li>`);
+                    html += `</ul></div>`;
+                }
+
+                // C.5 所属合作机构 (Collaborations)
+                const collabs = p.inst ? p.inst.filter(i => collaborationInstitutes.has(i)) : [];
+                if (collabs.length > 0) {
+                    html += `<div class="detail-section"><strong>COLLABORATIONS</strong><ul class="detail-list">`;
+                    collabs.forEach(c => html += `<li>${c}</li>`);
                     html += `</ul></div>`;
                 }
 
