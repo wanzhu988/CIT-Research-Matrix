@@ -369,8 +369,8 @@
                     return a.name.localeCompare(b.name);
                 });
             
-            // 默认全选
-            state.activeGroups = new Set(allGroups.map(g => g.name));
+            // 默认全不选
+            state.activeGroups = new Set();
             
             // 生成下拉菜单项（带院系分隔符）
             const container = $('#groupDropdownItems');
@@ -391,7 +391,7 @@
                 const item = $(`
                     <div class="dropdown-item">
                         <input type="checkbox" class="dropdown-checkbox" id="${safeId}" 
-                               data-group="${group.name}" checked>
+                               data-group="${group.name}">
                         <label class="dropdown-label" for="${safeId}" 
                                style="background-color: ${deptColor.color}; color: ${deptColor.labelColor};">
                             ${group.name}
@@ -468,8 +468,8 @@
                 .map(name => ({ name }))
                 .sort((a, b) => a.name.localeCompare(b.name));
             
-            // 默认全选
-            state.activeInstitutes = new Set(allInstitutes.map(i => i.name));
+            // 默认全不选
+            state.activeInstitutes = new Set();
             
             // 生成下拉菜单项
             const container = $('#instDropdownItems');
@@ -480,7 +480,7 @@
                 const item = $(`
                     <div class="dropdown-item">
                         <input type="checkbox" class="dropdown-checkbox inst-checkbox" id="${safeId}" 
-                               data-inst="${inst.name}" checked>
+                               data-inst="${inst.name}">
                         <label class="dropdown-label" for="${safeId}" 
                                style="background-color: #fcca00; color: #333;">
                             ${inst.name}
@@ -548,8 +548,8 @@
                 .map(name => ({ name }))
                 .sort((a, b) => a.name.localeCompare(b.name));
             
-            // 默认全选
-            state.activeCollaborations = new Set(allCollaborations.map(c => c.name));
+            // 默认全不选
+            state.activeCollaborations = new Set();
             
             // 生成下拉菜单项
             const container = $('#collabDropdownItems');
@@ -560,7 +560,7 @@
                 const item = $(`
                     <div class="dropdown-item">
                         <input type="checkbox" class="dropdown-checkbox collab-checkbox" id="${safeId}" 
-                               data-collab="${collab.name}" checked>
+                               data-collab="${collab.name}">
                         <label class="dropdown-label" for="${safeId}" 
                                style="background-color: #9c27b0; color: #fff;">
                             ${collab.name}
