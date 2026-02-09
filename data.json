@@ -9,6 +9,11 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "High-Performance Communication Systems and Technologies",
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -24,6 +29,10 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "High-Performance Communication Systems and Technologies"
+    ],
     "website": ""
   },
   {
@@ -35,6 +44,10 @@
         "group_name": "Communications",
         "group_dept": "CE"
       }
+    ],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "High-Performance Communication Systems and Technologies"
     ],
     "website": ""
   },
@@ -50,6 +63,12 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Energy Infrastructures and Sustainable Systems",
+      "High-Performance Communication Systems and Technologies",
+      "Sustainable Urban Mobility"
+    ],
     "website": ""
   },
   {
@@ -61,6 +80,11 @@
         "group_name": "Communications",
         "group_dept": "CE"
       }
+    ],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "High-Performance Communication Systems and Technologies",
+      "Quantum Science and Technology"
     ],
     "website": ""
   },
@@ -76,6 +100,9 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -90,6 +117,9 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -101,6 +131,10 @@
         "group_name": "Design of Electronic Circuits and Systems",
         "group_dept": "CE"
       }
+    ],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Quantum Science and Technology"
     ],
     "website": ""
   },
@@ -122,6 +156,11 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "Energy Infrastructures and Sustainable Systems",
+      "High-Performance Communication Systems and Technologies"
+    ],
     "website": ""
   },
   {
@@ -142,6 +181,10 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "High-Performance Communication Systems and Technologies"
+    ],
     "website": ""
   },
   {
@@ -157,6 +200,9 @@
         "group_name": "Communications",
         "group_dept": "CE"
       }
+    ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies"
     ],
     "website": ""
   },
@@ -176,6 +222,12 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "High-Performance Communication Systems and Technologies",
+      "Machine Intelligence and Robotics",
+      "Smart Agriculture and Ressource Security"
+    ],
     "website": ""
   },
   {
@@ -191,6 +243,9 @@
         "group_name": "Design of Electronic Circuits and Systems",
         "group_dept": "CE"
       }
+    ],
+    "TUM Focus Area": [
+      "Cybersecurity"
     ],
     "website": ""
   },
@@ -208,6 +263,7 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -228,6 +284,10 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "High-Performance Communication Systems and Technologies"
+    ],
     "website": ""
   },
   {
@@ -237,7 +297,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "CE"
+        "group_dept": "Unknown"
       },
       {
         "group_name": "Embedded and Cyber-physical Systems",
@@ -259,6 +319,10 @@
         "group_name": "Security, Safety, Risk Management",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies",
+      "Sustainable Urban Mobility"
     ],
     "website": ""
   },
@@ -287,6 +351,11 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies",
+      "Machine Intelligence and Robotics",
+      "Smart Agriculture and Ressource Security"
+    ],
     "website": ""
   },
   {
@@ -309,6 +378,11 @@
         "group_name": "Neuro-Engineering",
         "group_dept": "EE"
       }
+    ],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Machine Intelligence and Robotics",
+      "Neurosciences"
     ],
     "website": ""
   },
@@ -340,6 +414,11 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "High-Performance Communication Systems and Technologies",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -362,6 +441,9 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -379,6 +461,10 @@
         "group_name": "Communications",
         "group_dept": "CE"
       }
+    ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies",
+      "Machine Intelligence and Robotics"
     ],
     "website": ""
   },
@@ -401,6 +487,13 @@
         "group_name": "Communications",
         "group_dept": "CE"
       }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Energy Infrastructures and Sustainable Systems",
+      "High-Performance Communication Systems and Technologies",
+      "Machine Intelligence and Robotics",
+      "Quantum Science and Technology"
     ],
     "website": ""
   },
@@ -428,6 +521,12 @@
         "group_name": "Security, Safety, Risk Management",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Energy Infrastructures and Sustainable Systems",
+      "High-Performance Communication Systems and Technologies",
+      "Machine Intelligence and Robotics",
+      "Sustainable Urban Mobility"
     ],
     "website": ""
   },
@@ -459,6 +558,10 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -486,6 +589,12 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Energy Infrastructures and Sustainable Systems",
+      "High-Performance Communication Systems and Technologies",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -512,6 +621,11 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "Digital Medicine and Personalised Prevention",
+      "Machine Intelligence and Robotics",
+      "Neurosciences"
+    ],
     "website": ""
   },
   {
@@ -531,7 +645,7 @@
       },
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "CE"
+        "group_dept": "Unknown"
       },
       {
         "group_name": "Distributed & Mobile Computing",
@@ -545,6 +659,11 @@
         "group_name": "Digital Biology & Digital Medicine",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics",
+      "Sustainable Urban Mobility",
+      "Neurosciences"
     ],
     "website": ""
   },
@@ -567,7 +686,7 @@
       },
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "CE"
+        "group_dept": "Unknown"
       },
       {
         "group_name": "Neuro-Engineering",
@@ -577,6 +696,12 @@
         "group_name": "Digital Biology & Digital Medicine",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Integrated Materials, Energy, and Process Engineering",
+      "Machine Intelligence and Robotics",
+      "Smart Agriculture and Ressource Security",
+      "Sustainable Urban Mobility"
     ],
     "website": ""
   },
@@ -598,6 +723,9 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -607,6 +735,9 @@
       "MIRMI"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -616,6 +747,7 @@
       "MIRMI"
     ],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -625,6 +757,9 @@
       "MIRMI"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -634,6 +769,7 @@
       "MIRMI"
     ],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -644,6 +780,11 @@
       "MIBE"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Digital Medicine and Personalised Prevention",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -654,6 +795,11 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "Data Science and Machine Learning",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -661,6 +807,7 @@
     "dept": "CE",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -668,6 +815,7 @@
     "dept": "CE",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -680,6 +828,9 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Smart Agriculture and Ressource Security"
+    ],
     "website": ""
   },
   {
@@ -687,6 +838,7 @@
     "dept": "CE",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -696,6 +848,7 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -703,6 +856,11 @@
     "dept": "CE",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "High-Performance Communication Systems and Technologies",
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -712,7 +870,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "CE"
+        "group_dept": "Unknown"
       },
       {
         "group_name": "Data Engineering & Cloud Systems",
@@ -723,6 +881,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -734,7 +893,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "CE"
+        "group_dept": "Unknown"
       },
       {
         "group_name": "Information Systems & Software Engineering",
@@ -745,6 +904,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -756,7 +916,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "CE"
+        "group_dept": "Unknown"
       },
       {
         "group_name": "Digital Biology & Digital Medicine",
@@ -770,6 +930,10 @@
         "group_name": "Visual Computing",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Digital Medicine and Personalised Prevention"
     ],
     "website": ""
   },
@@ -805,6 +969,12 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Digital Medicine and Personalised Prevention",
+      "Machine Intelligence and Robotics",
+      "Smart Agriculture and Ressource Security"
+    ],
     "website": ""
   },
   {
@@ -826,6 +996,13 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Data Science and Machine Learning",
+      "Digital Medicine and Personalised Prevention",
+      "Cancer Research",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -845,6 +1022,13 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "Data Science and Machine Learning",
+      "High-Performance Communication Systems and Technologies",
+      "Integrated Materials, Energy, and Process Engineering",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -860,6 +1044,9 @@
         "group_name": "Visual Computing",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
     ],
     "website": ""
   },
@@ -879,6 +1066,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -889,6 +1077,7 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -905,6 +1094,10 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -912,6 +1105,7 @@
     "dept": "CS",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -928,6 +1122,9 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -939,6 +1136,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -961,6 +1161,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -977,6 +1178,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -984,6 +1186,7 @@
     "dept": "CS",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1007,6 +1210,10 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Integrated Materials, Energy, and Process Engineering",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -1016,6 +1223,7 @@
       "MDSI"
     ],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1023,6 +1231,7 @@
     "dept": "CS",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1033,6 +1242,7 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1053,6 +1263,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1060,6 +1271,7 @@
     "dept": "CS",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1070,6 +1282,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -1085,6 +1300,12 @@
         "group_name": "Digital Biology & Digital Medicine",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Digital Medicine and Personalised Prevention",
+      "Cancer Research",
+      "Machine Intelligence and Robotics"
     ],
     "website": ""
   },
@@ -1106,6 +1327,9 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -1120,6 +1344,9 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -1131,6 +1358,9 @@
         "group_name": "Information Systems & Software Engineering",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
     ],
     "website": ""
   },
@@ -1147,6 +1377,9 @@
         "group_name": "Security, Safety, Risk Management",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Cybersecurity"
     ],
     "website": ""
   },
@@ -1173,6 +1406,11 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Integrated Materials, Energy, and Process Engineering",
+      "Smart Agriculture and Ressource Security"
+    ],
     "website": ""
   },
   {
@@ -1183,6 +1421,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -1194,6 +1435,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -1201,6 +1445,7 @@
     "dept": "CS",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1217,6 +1462,11 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "High-Performance Communication Systems and Technologies",
+      "Integrated Materials, Energy, and Process Engineering"
+    ],
     "website": ""
   },
   {
@@ -1228,6 +1478,9 @@
         "group_name": "Algorithms & Complexity",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Quantum Science and Technology"
     ],
     "website": ""
   },
@@ -1247,6 +1500,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1266,6 +1520,10 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -1273,6 +1531,7 @@
     "dept": "CS",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1293,6 +1552,10 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Energy Infrastructures and Sustainable Systems",
+      "High-Performance Communication Systems and Technologies"
+    ],
     "website": ""
   },
   {
@@ -1304,6 +1567,9 @@
         "group_name": "Information Systems & Software Engineering",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies"
     ],
     "website": ""
   },
@@ -1325,6 +1591,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1336,6 +1603,9 @@
         "group_name": "Information Systems & Software Engineering",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Integrated Materials, Energy, and Process Engineering"
     ],
     "website": ""
   },
@@ -1349,6 +1619,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Digital Medicine and Personalised Prevention"
+    ],
     "website": ""
   },
   {
@@ -1361,6 +1634,11 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Digital Medicine and Personalised Prevention",
+      "Cancer Research"
+    ],
     "website": ""
   },
   {
@@ -1381,6 +1659,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1388,6 +1667,7 @@
     "dept": "CS",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1397,6 +1677,7 @@
       "MDSI"
     ],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1420,6 +1701,10 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Climate Research and Technologies",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -1427,6 +1712,9 @@
     "dept": "CS",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [
+      "Cybersecurity"
+    ],
     "website": ""
   },
   {
@@ -1434,6 +1722,7 @@
     "dept": "CS",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1445,6 +1734,9 @@
         "group_name": "Information Systems & Software Engineering",
         "group_dept": "CS"
       }
+    ],
+    "TUM Focus Area": [
+      "Integrated Materials, Energy, and Process Engineering"
     ],
     "website": ""
   },
@@ -1464,6 +1756,9 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -1475,6 +1770,10 @@
         "group_name": "Electronic, Optoelectronic and Hybrid Devices",
         "group_dept": "EE"
       }
+    ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies",
+      "Quantum Science and Technology"
     ],
     "website": ""
   },
@@ -1492,6 +1791,10 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "Energy Infrastructures and Sustainable Systems",
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -1507,6 +1810,10 @@
         "group_name": "Electromagnetic Sensors and Measurement Systems",
         "group_dept": "EE"
       }
+    ],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics",
+      "Quantum Science and Technology"
     ],
     "website": ""
   },
@@ -1528,6 +1835,7 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1544,6 +1852,7 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1562,6 +1871,11 @@
         "group_name": "Embedded and Cyber-physical Systems",
         "group_dept": "CE"
       }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Energy Infrastructures and Sustainable Systems",
+      "Quantum Science and Technology"
     ],
     "website": ""
   },
@@ -1582,6 +1896,9 @@
         "group_name": "Electronics for Life-Sciences",
         "group_dept": "EE"
       }
+    ],
+    "TUM Focus Area": [
+      "Energy Infrastructures and Sustainable Systems"
     ],
     "website": ""
   },
@@ -1607,6 +1924,9 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -1618,6 +1938,9 @@
         "group_name": "Design of Electronic Circuits and Systems",
         "group_dept": "CE"
       }
+    ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies"
     ],
     "website": ""
   },
@@ -1635,6 +1958,9 @@
         "group_dept": "CE"
       }
     ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies"
+    ],
     "website": ""
   },
   {
@@ -1649,6 +1975,11 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "Climate Research and Technologies",
+      "Machine Intelligence and Robotics",
+      "Aerospace and Geodesy"
+    ],
     "website": ""
   },
   {
@@ -1662,6 +1993,11 @@
         "group_name": "Electronics for Life-Sciences",
         "group_dept": "EE"
       }
+    ],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Digital Medicine and Personalised Prevention",
+      "Cancer Research"
     ],
     "website": ""
   },
@@ -1683,6 +2019,7 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1706,6 +2043,11 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Digital Medicine and Personalised Prevention",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -1724,6 +2066,12 @@
         "group_name": "Neuro-Engineering",
         "group_dept": "EE"
       }
+    ],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Digital Medicine and Personalised Prevention",
+      "Machine Intelligence and Robotics",
+      "Neurosciences"
     ],
     "website": ""
   },
@@ -1744,6 +2092,12 @@
         "group_dept": "EE"
       }
     ],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Digital Medicine and Personalised Prevention",
+      "Machine Intelligence and Robotics",
+      "Neurosciences"
+    ],
     "website": ""
   },
   {
@@ -1753,6 +2107,10 @@
       "MIBE"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Digital Medicine and Personalised Prevention",
+      "Cancer Research"
+    ],
     "website": ""
   },
   {
@@ -1762,6 +2120,7 @@
       "MIBE"
     ],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1769,6 +2128,7 @@
     "dept": "EE",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1776,6 +2136,11 @@
     "dept": "EE",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [
+      "Energy Infrastructures and Sustainable Systems",
+      "High-Performance Communication Systems and Technologies",
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -1787,6 +2152,10 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -1797,6 +2166,9 @@
       "MEP"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -1804,6 +2176,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1813,6 +2186,11 @@
       "MDSI"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Climate Research and Technologies",
+      "Cancer Research"
+    ],
     "website": ""
   },
   {
@@ -1823,6 +2201,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -1830,6 +2211,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1837,6 +2219,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1847,6 +2230,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -1854,6 +2240,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1861,6 +2248,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1868,6 +2256,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1875,6 +2264,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1882,6 +2272,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1889,6 +2280,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1896,6 +2288,9 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -1906,6 +2301,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -1916,6 +2314,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Climate Research and Technologies"
+    ],
     "website": ""
   },
   {
@@ -1923,6 +2324,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1930,6 +2332,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1937,6 +2340,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1944,6 +2348,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1951,6 +2356,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1958,6 +2364,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1965,6 +2372,9 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [
+      "Cybersecurity"
+    ],
     "website": ""
   },
   {
@@ -1972,6 +2382,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1979,6 +2390,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1986,6 +2398,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -1993,6 +2406,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2005,6 +2419,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2012,6 +2427,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2022,6 +2438,9 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
     "website": ""
   },
   {
@@ -2029,6 +2448,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2041,6 +2461,12 @@
       "MCML"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Digital Medicine and Personalised Prevention",
+      "Cancer Research",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -2048,6 +2474,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2055,6 +2482,9 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -2062,6 +2492,9 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -2069,6 +2502,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2081,6 +2515,7 @@
         "group_dept": "CS"
       }
     ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2088,6 +2523,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2097,6 +2533,10 @@
       "MEP"
     ],
     "research_group": [],
+    "TUM Focus Area": [
+      "Integrated Materials, Energy, and Process Engineering",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
@@ -2104,6 +2544,9 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -2111,6 +2554,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2118,6 +2562,7 @@
     "dept": "MATH",
     "inst": [],
     "research_group": [],
+    "TUM Focus Area": [],
     "website": ""
   }
 ]
