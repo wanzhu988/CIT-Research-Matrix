@@ -152,6 +152,29 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1); border: 1px solid #eee;
             max-width: 260px; pointer-events: none; /* 让鼠标能穿透点击到底下的图 */
         }
+
+        /* --- 右下角 AND/OR 逻辑切换 --- */
+        .filter-logic-toggle {
+            position: absolute; bottom: 20px; right: 20px; z-index: 10;
+            background: rgba(255,255,255,0.95); padding: 10px 14px; border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); border: 1px solid #eee;
+            display: flex; align-items: center; gap: 8px; cursor: pointer;
+            font-size: 13px; font-weight: 600; color: #333;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .filter-logic-toggle:hover {
+            background: #fff; box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+        .filter-logic-toggle .eye-icon {
+            width: 20px; height: 20px;
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        .filter-logic-toggle .eye-icon svg {
+            width: 18px; height: 18px; fill: #555;
+        }
+        .filter-logic-toggle .logic-label {
+            min-width: 28px; text-align: center;
+        }
         
         /* --- 侧边抽屉 (Drawer) --- */
         .drawer {
@@ -273,6 +296,13 @@
         </p>
     </div>
 
+    <div class="filter-logic-toggle" id="filterLogicToggle" title="切换筛选逻辑：AND（需同时满足） / OR（满足其一即可）">
+        <span class="eye-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+        </span>
+        <span class="logic-label" id="logicLabel">AND</span>
+    </div>
+
     <div id="infoDrawer" class="drawer">
         <div class="drawer-header">
             <h2 id="drawerTitle">Title</h2>
@@ -292,7 +322,8 @@
             activeInstitutes: new Set(), // 选中的机构
             activeGroups: new Set(), // 选中的研究组
             activeCollaborations: new Set(), // 选中的合作机构
-            activeFocusAreas: new Set() // 选中的 TUM Focus Area
+            activeFocusAreas: new Set(), // 选中的 TUM Focus Area
+            filterLogic: 'and' // 'and' | 'or'：多类筛选之间的逻辑
         };
         
         let allGroups = []; // 存储所有研究组及其所属院系 [{name, dept}, ...]
@@ -686,6 +717,13 @@
 
         function closeDrawer() { $('#infoDrawer').removeClass('open'); }
 
+        // --- 右下角 AND/OR 逻辑切换 ---
+        $('#filterLogicToggle').on('click', function() {
+            state.filterLogic = state.filterLogic === 'and' ? 'or' : 'and';
+            $('#logicLabel').text(state.filterLogic.toUpperCase());
+            updateGraph();
+        });
+
         myChart.showLoading();
 
         // --- 数据加载与处理 ---
@@ -760,46 +798,45 @@
                 // 筛选条件 A: 教授所属院系必须是被选中的
                 if (!state.activeDepts.has(prof.dept)) return;
 
-                // 筛选条件 B: 如果选中了机构，教授必须属于至少一个选中的机构
                 const hasSelectedInst = state.activeInstitutes.size > 0;
-                if (hasSelectedInst) {
-                    const profInsts = prof.inst || [];
-                    const belongsToSelectedInst = profInsts.some(inst => 
-                        state.activeInstitutes.has(inst) && !collaborationInstitutes.has(inst)
-                    );
-                    if (!belongsToSelectedInst) return; // 不属于任何选中的机构，跳过
-                }
-
-                // 筛选条件 C: 如果选中了合作机构，教授必须属于至少一个选中的合作机构
                 const hasSelectedCollab = state.activeCollaborations.size > 0;
-                if (hasSelectedCollab) {
-                    const profInsts = prof.inst || [];
-                    const belongsToSelectedCollab = profInsts.some(inst => 
-                        collaborationInstitutes.has(inst) && state.activeCollaborations.has(inst)
-                    );
-                    if (!belongsToSelectedCollab) return; // 不属于任何选中的合作机构，跳过
-                }
-
-                // 筛选条件 D: 如果选中了研究组，教授必须属于至少一个选中的研究组
                 const hasSelectedGroup = state.activeGroups.size > 0;
-                if (hasSelectedGroup) {
-                    const profGroups = prof.research_group || [];
-                    const belongsToSelectedGroup = profGroups.some(g => {
-                        if (g.group_name === "Neuro-Engineering" && g.group_dept === "CE") return false;
-                        return state.activeGroups.has(g.group_name);
-                    });
-                    if (!belongsToSelectedGroup) return;
-                }
-
-                // 筛选条件 E: 如果选中了 TUM Focus Area，教授必须属于至少一个选中的 Focus Area
                 const hasSelectedFocusArea = state.activeFocusAreas.size > 0;
-                if (hasSelectedFocusArea) {
-                    const profFocusAreas = prof[FOCUS_AREA_KEY] || [];
-                    const belongsToSelectedFocusArea = profFocusAreas.some(fa => state.activeFocusAreas.has(fa));
-                    if (!belongsToSelectedFocusArea) return;
+
+                if (state.filterLogic === 'and') {
+                    // AND：每一类有选中时，教授都必须满足该类
+                    if (hasSelectedInst) {
+                        const profInsts = prof.inst || [];
+                        if (!profInsts.some(inst => state.activeInstitutes.has(inst) && !collaborationInstitutes.has(inst))) return;
+                    }
+                    if (hasSelectedCollab) {
+                        const profInsts = prof.inst || [];
+                        if (!profInsts.some(inst => collaborationInstitutes.has(inst) && state.activeCollaborations.has(inst))) return;
+                    }
+                    if (hasSelectedGroup) {
+                        const profGroups = prof.research_group || [];
+                        if (!profGroups.some(g => !(g.group_name === "Neuro-Engineering" && g.group_dept === "CE") && state.activeGroups.has(g.group_name))) return;
+                    }
+                    if (hasSelectedFocusArea) {
+                        const profFocusAreas = prof[FOCUS_AREA_KEY] || [];
+                        if (!profFocusAreas.some(fa => state.activeFocusAreas.has(fa))) return;
+                    }
+                } else {
+                    // OR：若任一类有选中，教授只需满足其中至少一类即可
+                    const anyFilterActive = hasSelectedInst || hasSelectedCollab || hasSelectedGroup || hasSelectedFocusArea;
+                    if (anyFilterActive) {
+                        const profInsts = prof.inst || [];
+                        const instMatch = hasSelectedInst && profInsts.some(inst => state.activeInstitutes.has(inst) && !collaborationInstitutes.has(inst));
+                        const collabMatch = hasSelectedCollab && profInsts.some(inst => collaborationInstitutes.has(inst) && state.activeCollaborations.has(inst));
+                        const profGroups = prof.research_group || [];
+                        const groupMatch = hasSelectedGroup && profGroups.some(g => !(g.group_name === "Neuro-Engineering" && g.group_dept === "CE") && state.activeGroups.has(g.group_name));
+                        const profFocusAreas = prof[FOCUS_AREA_KEY] || [];
+                        const focusMatch = hasSelectedFocusArea && profFocusAreas.some(fa => state.activeFocusAreas.has(fa));
+                        if (!instMatch && !collabMatch && !groupMatch && !focusMatch) return;
+                    }
                 }
 
-                // 只有同时满足所有条件，才添加教授节点
+                // 通过筛选，添加教授节点
                 // 2.1 添加教授节点
                 addNode(prof.name, prof.name, 'prof', prof.dept);
 
