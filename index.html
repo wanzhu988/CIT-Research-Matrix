@@ -407,7 +407,7 @@
                 const safeId = `group_${index}`; // 使用索引作为 ID，避免特殊字符
                 const item = $(`
                     <div class="dropdown-item">
-                        <input type="checkbox" class="dropdown-checkbox" id="${safeId}" 
+                        <input type="checkbox" class="dropdown-checkbox group-checkbox" id="${safeId}" 
                                data-group="${group.name}">
                         <label class="dropdown-label" for="${safeId}" 
                                style="background-color: ${deptColor.color}; color: ${deptColor.labelColor};">
@@ -418,9 +418,10 @@
                 container.append(item);
             });
             
-            // 绑定复选框事件
-            $('.dropdown-checkbox').on('change', function() {
+            // 绑定复选框事件（使用 group-checkbox 专属类，避免与其他下拉框的事件冲突）
+            $(document).on('change', '.group-checkbox', function() {
                 const groupName = $(this).data('group');
+                if (!groupName) return;
                 if ($(this).is(':checked')) {
                     state.activeGroups.add(groupName);
                 } else {
@@ -454,14 +455,14 @@
         // Select All Groups
         $('#selectAllGroups').on('click', function() {
             allGroups.forEach(g => state.activeGroups.add(g.name));
-            $('#groupDropdownMenu .dropdown-checkbox').prop('checked', true);
+            $('#groupDropdownMenu .group-checkbox').prop('checked', true);
             updateGraph();
         });
         
         // Deselect All
         $('#deselectAllGroups').on('click', function() {
             state.activeGroups.clear();
-            $('#groupDropdownMenu .dropdown-checkbox').prop('checked', false);
+            $('#groupDropdownMenu .group-checkbox').prop('checked', false);
             updateGraph();
         });
 

@@ -16,26 +16,6 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. Mikhail Belkin",
-    "dept": "EE",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
-        "group_dept": "EE"
-      },
-      {
-        "group_name": "Electromagnetic Sensors and Measurement Systems",
-        "group_dept": "EE"
-      }
-    ],
-    "TUM Focus Area": [
-      "Energy Infrastructures and Sustainable Systems",
-      "Quantum Science and Technology"
-    ],
-    "website": ""
-  },
-  {
     "name": "Prof. Dr.-Ing. Christian Jirauschek",
     "dept": "EE",
     "inst": [],
@@ -51,6 +31,26 @@
     ],
     "TUM Focus Area": [
       "Machine Intelligence and Robotics",
+      "Quantum Science and Technology"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Mikhail Belkin",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Electronic, Optoelectronic and Hybrid Devices",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Electromagnetic Sensors and Measurement Systems",
+        "group_dept": "EE"
+      }
+    ],
+    "TUM Focus Area": [
+      "Energy Infrastructures and Sustainable Systems",
       "Quantum Science and Technology"
     ],
     "website": ""
@@ -168,6 +168,71 @@
     "website": ""
   },
   {
+    "name": "Prof. Dr. Lorenz Panny",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [
+      "Cybersecurity"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Murad Alim",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Mathematical Physics",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. habil. Gregor Kemper",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Algebra & Algebraic Geometry",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Deniz Kus",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Christian Liedtke",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Algebra & Algebraic Geometry",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.sc.nat. Violetta Weger",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
     "name": "Prof. Dr. rer. nat. Andreas Schulz",
     "dept": "MATH",
     "inst": [],
@@ -177,7 +242,7 @@
         "group_dept": "CS"
       },
       {
-        "group_name": "Discrete Optimization",
+        "group_name": "Optimization",
         "group_dept": "MATH"
       }
     ],
@@ -194,7 +259,7 @@
         "group_dept": "CS"
       },
       {
-        "group_name": "Discrete Optimization",
+        "group_name": "Optimization",
         "group_dept": "MATH"
       }
     ],
@@ -458,6 +523,99 @@
     "website": ""
   },
   {
+    "name": "Prof. Dr. Marco Cicalese",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Analysis & Partial Differential Equations (PDE)",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Gero Friesecke",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Analysis & Partial Differential Equations (PDE)",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Visualization & Imaging",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Christina Kuttler",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Analysis & Partial Differential Equations (PDE)",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Life Science",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Johannes Müller",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Analysis & Partial Differential Equations (PDE)",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Life Science",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Johannes Zimmer",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Analysis & Partial Differential Equations (PDE)",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Engineering",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
     "name": "Prof. Dr.-Ing. Nils Thürey",
     "dept": "CS",
     "inst": [
@@ -508,6 +666,22 @@
     "website": ""
   },
   {
+    "name": "Prof. Dr.sc. tech. Gerhard Kramer",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Communications",
+        "group_dept": "CE"
+      }
+    ],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "High-Performance Communication Systems and Technologies"
+    ],
+    "website": ""
+  },
+  {
     "name": "Prof. Dr. rer. nat. Dr.-Ing. Holger Boche",
     "dept": "CE",
     "inst": [],
@@ -525,26 +699,7 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr.sc. ETH Zürich Reinhard Heckel",
-    "dept": "CE",
-    "inst": [
-      "MDSI",
-      "MCML"
-    ],
-    "research_group": [
-      {
-        "group_name": "Communications",
-        "group_dept": "CE"
-      }
-    ],
-    "TUM Focus Area": [
-      "Data Science and Machine Learning",
-      "High-Performance Communication Systems and Technologies"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr.sc. tech. Gerhard Kramer",
+    "name": "Prof. Dr.-Ing. Antonia Wachter-Zeh",
     "dept": "CE",
     "inst": [],
     "research_group": [
@@ -555,7 +710,8 @@
     ],
     "TUM Focus Area": [
       "Cybersecurity",
-      "High-Performance Communication Systems and Technologies"
+      "High-Performance Communication Systems and Technologies",
+      "Quantum Science and Technology"
     ],
     "website": ""
   },
@@ -580,9 +736,12 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr.-Ing. Antonia Wachter-Zeh",
+    "name": "Prof. Dr.sc. ETH Zürich Reinhard Heckel",
     "dept": "CE",
-    "inst": [],
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
     "research_group": [
       {
         "group_name": "Communications",
@@ -590,9 +749,8 @@
       }
     ],
     "TUM Focus Area": [
-      "Cybersecurity",
-      "High-Performance Communication Systems and Technologies",
-      "Quantum Science and Technology"
+      "Data Science and Machine Learning",
+      "High-Performance Communication Systems and Technologies"
     ],
     "website": ""
   },
@@ -680,6 +838,103 @@
     "website": ""
   },
   {
+    "name": "Prof. Dr. Felix Krahmer",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Optimization",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Engineering",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Massimo Fornasier",
+    "dept": "MATH",
+    "inst": [
+      "MIRMI",
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Numerics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Analysis & Partial Differential Equations (PDE)",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Visualization & Imaging",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Machine Intelligence and Robotics"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Ph.D. Donna Ankerst",
+    "dept": "MATH",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Life Science",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Climate Research and Technologies",
+      "Cancer Research"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Robert Wille",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Design of Electronic Circuits and Systems",
+        "group_dept": "CE"
+      }
+    ],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Quantum Science and Technology"
+    ],
+    "website": ""
+  },
+  {
     "name": "Prof. Dr.-Ing. Hussam Amrouch",
     "dept": "CE",
     "inst": [
@@ -693,21 +948,6 @@
     ],
     "TUM Focus Area": [
       "Machine Intelligence and Robotics"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr.-Ing. Amelie Hagelauer",
-    "dept": "EE",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Design of Electronic Circuits and Systems",
-        "group_dept": "CE"
-      }
-    ],
-    "TUM Focus Area": [
-      "High-Performance Communication Systems and Technologies"
     ],
     "website": ""
   },
@@ -729,8 +969,8 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr.-Ing. Robert Wille",
-    "dept": "CE",
+    "name": "Prof. Dr.-Ing. Amelie Hagelauer",
+    "dept": "EE",
     "inst": [],
     "research_group": [
       {
@@ -739,8 +979,7 @@
       }
     ],
     "TUM Focus Area": [
-      "Biomedical Engineering",
-      "Quantum Science and Technology"
+      "High-Performance Communication Systems and Technologies"
     ],
     "website": ""
   },
@@ -785,6 +1024,19 @@
     "TUM Focus Area": [
       "Machine Intelligence and Robotics"
     ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Andreas Wiese",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Optimization",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -837,6 +1089,23 @@
     "website": ""
   },
   {
+    "name": "Prof. Dr. rer. nat. Daniel Matthes",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Analysis & Partial Differential Equations (PDE)",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Quantum Science",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
     "name": "Prof. Dr.-Ing. Thomas Eibert",
     "dept": "EE",
     "inst": [],
@@ -875,25 +1144,6 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr.-Ing. Jia Chen",
-    "dept": "EE",
-    "inst": [
-      "MIRMI"
-    ],
-    "research_group": [
-      {
-        "group_name": "Electronics for Life-Sciences",
-        "group_dept": "EE"
-      }
-    ],
-    "TUM Focus Area": [
-      "Climate Research and Technologies",
-      "Machine Intelligence and Robotics",
-      "Aerospace and Geodesy"
-    ],
-    "website": ""
-  },
-  {
     "name": "Prof. Dr. rer. nat. Oliver Hayden",
     "dept": "EE",
     "inst": [
@@ -909,6 +1159,25 @@
       "Biomedical Engineering",
       "Digital Medicine and Personalised Prevention",
       "Cancer Research"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Jia Chen",
+    "dept": "EE",
+    "inst": [
+      "MIRMI"
+    ],
+    "research_group": [
+      {
+        "group_name": "Electronics for Life-Sciences",
+        "group_dept": "EE"
+      }
+    ],
+    "TUM Focus Area": [
+      "Climate Research and Technologies",
+      "Machine Intelligence and Robotics",
+      "Aerospace and Geodesy"
     ],
     "website": ""
   },
@@ -1036,13 +1305,98 @@
     "website": ""
   },
   {
+    "name": "Prof. Dr. rer. nat. Ulrich Bauer",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Geometry & Topology",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Algebra & Algebraic Geometry",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. habil. Tim-Nikolai Hoffmann",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Geometry & Topology",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Visualization & Imaging",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Jürgen Richter-Gebert",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Geometry & Topology",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Algebra & Algebraic Geometry",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Visualization & Imaging",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Claudia Scheimbauer",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Geometry & Topology",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Algebra & Algebraic Geometry",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Quantum Science",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
     "name": "Prof. Dr. Stephan Krusche",
     "dept": "CS",
     "inst": [],
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       },
       {
         "group_name": "Data Engineering & Cloud Systems",
@@ -1065,7 +1419,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       },
       {
         "group_name": "Digital Biology & Digital Medicine",
@@ -1093,7 +1447,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       },
       {
         "group_name": "Embedded and Cyber-physical Systems",
@@ -1131,7 +1485,7 @@
     "research_group": [
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       },
       {
         "group_name": "Information Systems & Software Engineering",
@@ -1143,36 +1497,6 @@
       }
     ],
     "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Ph.D. Matthias Grabmair",
-    "dept": "CS",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Information Systems & Software Engineering",
-        "group_dept": "CS"
-      }
-    ],
-    "TUM Focus Area": [
-      "Data Science and Machine Learning"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Luise Pufahl",
-    "dept": "CS",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Information Systems & Software Engineering",
-        "group_dept": "CS"
-      }
-    ],
-    "TUM Focus Area": [
-      "High-Performance Communication Systems and Technologies"
-    ],
     "website": ""
   },
   {
@@ -1206,6 +1530,36 @@
     "website": ""
   },
   {
+    "name": "Prof. Ph.D. Matthias Grabmair",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Information Systems & Software Engineering",
+        "group_dept": "CS"
+      }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Luise Pufahl",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Information Systems & Software Engineering",
+        "group_dept": "CS"
+      }
+    ],
+    "TUM Focus Area": [
+      "High-Performance Communication Systems and Technologies"
+    ],
+    "website": ""
+  },
+  {
     "name": "Prof. Dr. Jens Großklags",
     "dept": "CS",
     "inst": [],
@@ -1221,6 +1575,167 @@
     ],
     "TUM Focus Area": [
       "Cybersecurity"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Christoph Knochenhauer",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Finance & Insurance",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Matthias Scherer",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Finance & Insurance",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Rudi Zagst",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Finance & Insurance",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Fabian Theis",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MIBE",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Visualization & Imaging",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Life Science",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Digital Medicine and Personalised Prevention",
+      "Cancer Research",
+      "Machine Intelligence and Robotics"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Michael Ulbrich",
+    "dept": "MATH",
+    "inst": [
+      "MIRMI",
+      "MEP"
+    ],
+    "research_group": [
+      {
+        "group_name": "Optimization",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Numerics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Engineering",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Simone Warzel",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Mathematical Physics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Analysis & Partial Differential Equations (PDE)",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Quantum Science",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Quantum Science and Technology"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Christian Kühn",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Numerics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Analysis & Partial Differential Equations (PDE)",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Life Science",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Climate Research and Technologies"
     ],
     "website": ""
   },
@@ -1415,6 +1930,174 @@
       "Digital Medicine and Personalised Prevention",
       "Machine Intelligence and Robotics",
       "Neurosciences"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Barbara Wohlmuth",
+    "dept": "MATH",
+    "inst": [
+      "MEP"
+    ],
+    "research_group": [
+      {
+        "group_name": "Numerics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Engineering",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Integrated Materials, Energy, and Process Engineering",
+      "Machine Intelligence and Robotics"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Eric Sonnendrücker",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Numerics",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Caroline Lasser",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Numerics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Mathematical Physics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Quantum Science",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Boris Vexler",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Optimization",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Numerics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Engineering",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. habil. Nina Gantert",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Life Science",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Silke Rolles",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Noam-Berger Steiger",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Robert König",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Mathematical Physics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Quantum Science",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Quantum Science and Technology"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Michael-Marc Wolf",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Mathematical Physics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Quantum Science",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Quantum Science and Technology"
     ],
     "website": ""
   },
@@ -1630,37 +2313,6 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. Gordon Cheng",
-    "dept": "CE",
-    "inst": [
-      "MIBE"
-    ],
-    "research_group": [
-      {
-        "group_name": "Robotics & Autonomous Systems",
-        "group_dept": "CE"
-      },
-      {
-        "group_name": "Neuro-Engineering",
-        "group_dept": "CE"
-      },
-      {
-        "group_name": "Embedded and Cyber-physical Systems",
-        "group_dept": "CE"
-      },
-      {
-        "group_name": "Neuro-Engineering",
-        "group_dept": "EE"
-      }
-    ],
-    "TUM Focus Area": [
-      "Digital Medicine and Personalised Prevention",
-      "Machine Intelligence and Robotics",
-      "Neurosciences"
-    ],
-    "website": ""
-  },
-  {
     "name": "Prof. Dr.-Ing. Sandra Hirche",
     "dept": "CE",
     "inst": [
@@ -1690,6 +2342,37 @@
       "Energy Infrastructures and Sustainable Systems",
       "High-Performance Communication Systems and Technologies",
       "Machine Intelligence and Robotics"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Gordon Cheng",
+    "dept": "CE",
+    "inst": [
+      "MIBE"
+    ],
+    "research_group": [
+      {
+        "group_name": "Robotics & Autonomous Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Embedded and Cyber-physical Systems",
+        "group_dept": "CE"
+      },
+      {
+        "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      }
+    ],
+    "TUM Focus Area": [
+      "Digital Medicine and Personalised Prevention",
+      "Machine Intelligence and Robotics",
+      "Neurosciences"
     ],
     "website": ""
   },
@@ -1794,6 +2477,53 @@
     "website": ""
   },
   {
+    "name": "Prof. Dr. rer. nat. Elisabeth Ullmann",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Numerics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Engineering",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Ph.D. Mathias Drton",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [
+      {
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Algebra & Algebraic Geometry",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
+    "website": ""
+  },
+  {
     "name": "Prof. Dr. Ph.D. Angela Dai",
     "dept": "CS",
     "inst": [
@@ -1813,62 +2543,67 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. rer. nat. Amr Abdelhafez",
+    "name": "Prof. Dr. Cristina Piazza",
     "dept": "CE",
-    "inst": [],
+    "inst": [
+      "MIRMI",
+      "MIBE"
+    ],
     "research_group": [],
-    "TUM Focus Area": [],
+    "TUM Focus Area": [
+      "Biomedical Engineering",
+      "Digital Medicine and Personalised Prevention",
+      "Machine Intelligence and Robotics"
+    ],
     "website": ""
   },
   {
-    "name": "Prof. Dr. Zeynep Akata-Schulz",
-    "dept": "CS",
+    "name": "Prof. Dr. Achim Lilienthal",
+    "dept": "CE",
     "inst": [
-      "MDSI",
+      "MIRMI"
+    ],
+    "research_group": [],
+    "TUM Focus Area": [
+      "Machine Intelligence and Robotics"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. habil. Mario Trapp",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [
+      "Cybersecurity"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.sc. ETH Zürich Angela Schöllig",
+    "dept": "CE",
+    "inst": [
+      "MIRMI",
       "MCML"
     ],
     "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Murad Alim",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Algebra",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Ph.D. Donna Ankerst",
-    "dept": "MATH",
-    "inst": [
-      "MDSI"
-    ],
-    "research_group": [
-      {
-        "group_name": "Data Science",
-        "group_dept": "MATH"
-      }
-    ],
     "TUM Focus Area": [
+      "Cybersecurity",
       "Data Science and Machine Learning",
-      "Climate Research and Technologies",
-      "Cancer Research"
+      "Machine Intelligence and Robotics"
     ],
     "website": ""
   },
   {
-    "name": "Prof. Dr. rer. nat. Hartwig Anzt",
-    "dept": "CS",
+    "name": "Prof. Dr. phil. Tobias Vogl",
+    "dept": "CE",
     "inst": [],
     "research_group": [],
-    "TUM Focus Area": [],
+    "TUM Focus Area": [
+      "Cybersecurity",
+      "High-Performance Communication Systems and Technologies",
+      "Quantum Science and Technology"
+    ],
     "website": ""
   },
   {
@@ -1886,159 +2621,6 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. rer. nat. Ulrich Bauer",
-    "dept": "MATH",
-    "inst": [
-      "MDSI",
-      "MCML"
-    ],
-    "research_group": [
-      {
-        "group_name": "Geometry and Topology",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Data Science and Machine Learning"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr.-Ing. Berthold Bäuml",
-    "dept": "CE",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. habil. Folkmar Bornemann",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Florian Bruse",
-    "dept": "CS",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Chunyang Chen",
-    "dept": "CS",
-    "inst": [
-      "MDSI"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Marco Cicalese",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Analysis",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr.-Ing. Maribel-Acosta Deibe",
-    "dept": "CS",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Ghulam Destgeer",
-    "dept": "EE",
-    "inst": [
-      "MIBE"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Digital Medicine and Personalised Prevention",
-      "Cancer Research"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Felix Dietrich",
-    "dept": "CS",
-    "inst": [
-      "MDSI",
-      "MCML"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr.-Ing. Can Dincer",
-    "dept": "EE",
-    "inst": [
-      "MIBE"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Ph.D. Mathias Drton",
-    "dept": "MATH",
-    "inst": [
-      "MDSI",
-      "MCML"
-    ],
-    "research_group": [
-      {
-        "group_name": "Statistics",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Data Science and Machine Learning"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Ph.D. Bernd Finkbeiner",
-    "dept": "CS",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Massimo Fornasier",
-    "dept": "MATH",
-    "inst": [
-      "MIRMI",
-      "MDSI",
-      "MCML"
-    ],
-    "research_group": [
-      {
-        "group_name": "Data Science",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Data Science and Machine Learning",
-      "Machine Intelligence and Robotics"
-    ],
-    "website": ""
-  },
-  {
     "name": "Prof. Dr. Alexander Fraser",
     "dept": "CS",
     "inst": [
@@ -2052,53 +2634,6 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. Gero Friesecke",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Analysis",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. habil. Nina Gantert",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Probability Theory",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr.-Ing. Stephan Günther",
-    "dept": "CE",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. habil. Tim-Nikolai Hoffmann",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Geometry and Topology",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
     "name": "Prof. Dr. Stefanie Jegelka",
     "dept": "CS",
     "inst": [
@@ -2109,27 +2644,6 @@
     "TUM Focus Area": [
       "Data Science and Machine Learning"
     ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Oliver Junge",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. habil. Gregor Kemper",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Algebra",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
     "website": ""
   },
   {
@@ -2159,12 +2673,205 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. rer. nat. Christoph Knochenhauer",
+    "name": "Prof. Dr. Suvrit Sra",
+    "dept": "MATH",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Julia Schnabel",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MIBE",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "TUM Focus Area": [
+      "Data Science and Machine Learning",
+      "Digital Medicine and Personalised Prevention",
+      "Cancer Research"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Univ.-Prof. Dr. Daniel Rückert",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MIBE",
+      "MUDS",
+      "MCML"
+    ],
+    "research_group": [],
+    "TUM Focus Area": [
+      "Digital Medicine and Personalised Prevention"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Ghulam Destgeer",
+    "dept": "EE",
+    "inst": [
+      "MIBE"
+    ],
+    "research_group": [],
+    "TUM Focus Area": [
+      "Digital Medicine and Personalised Prevention",
+      "Cancer Research"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Eva Weig",
+    "dept": "EE",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [
+      "Energy Infrastructures and Sustainable Systems",
+      "High-Performance Communication Systems and Technologies",
+      "Quantum Science and Technology"
+    ],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Amr Abdelhafez",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. Zeynep Akata-Schulz",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Hartwig Anzt",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Berthold Bäuml",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. habil. Folkmar Bornemann",
     "dept": "MATH",
     "inst": [],
     "research_group": [
       {
-        "group_name": "Mathematical Finance and Actuarial Science",
+        "group_name": "Probability and Statistics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Numerics",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Visualization & Imaging",
+        "group_dept": "MATH"
+      },
+      {
+        "group_name": "Data & Information",
+        "group_dept": "MATH"
+      }
+    ],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Florian Bruse",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Chunyang Chen",
+    "dept": "CS",
+    "inst": [
+      "MDSI"
+    ],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Maribel-Acosta Deibe",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Felix Dietrich",
+    "dept": "CS",
+    "inst": [
+      "MDSI",
+      "MCML"
+    ],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Can Dincer",
+    "dept": "EE",
+    "inst": [
+      "MIBE"
+    ],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Ph.D. Bernd Finkbeiner",
+    "dept": "CS",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr.-Ing. Stephan Günther",
+    "dept": "CE",
+    "inst": [],
+    "research_group": [],
+    "TUM Focus Area": [],
+    "website": ""
+  },
+  {
+    "name": "Prof. Dr. rer. nat. Oliver Junge",
+    "dept": "MATH",
+    "inst": [],
+    "research_group": [
+      {
+        "group_name": "Numerics",
         "group_dept": "MATH"
       }
     ],
@@ -2190,121 +2897,6 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. Robert König",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Quantum Information Theory",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Quantum Science and Technology"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Felix Krahmer",
-    "dept": "MATH",
-    "inst": [
-      "MDSI",
-      "MCML"
-    ],
-    "research_group": [
-      {
-        "group_name": "Data Science",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Data Science and Machine Learning"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Christian Kühn",
-    "dept": "MATH",
-    "inst": [
-      "MDSI",
-      "MCML"
-    ],
-    "research_group": [
-      {
-        "group_name": "Multiscale and Stochastic Dynamics",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Climate Research and Technologies"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Deniz Kus",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Algebra",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Christina Kuttler",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Analysis and Mathematical Biology",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Caroline Lasser",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Numerics of Partial Differential Equations",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Christian Liedtke",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Algebra",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Achim Lilienthal",
-    "dept": "CE",
-    "inst": [
-      "MIRMI"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Machine Intelligence and Robotics"
-    ],
-    "website": ""
-  },
-  {
     "name": "Prof. Dr. Riccardo Marin",
     "dept": "CE",
     "inst": [
@@ -2325,32 +2917,6 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. rer. nat. Daniel Matthes",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Dynamical Systems",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Johannes Müller",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Analysis and Mathematical Biology",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
     "name": "Prof. Dr.-Ing. Benjamin Nuß",
     "dept": "EE",
     "inst": [],
@@ -2359,182 +2925,10 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. Lorenz Panny",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Algebra",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Cybersecurity"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Cristina Piazza",
-    "dept": "CE",
-    "inst": [
-      "MIRMI",
-      "MIBE"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Biomedical Engineering",
-      "Digital Medicine and Personalised Prevention",
-      "Machine Intelligence and Robotics"
-    ],
-    "website": ""
-  },
-  {
     "name": "Prof. Dr. techn. Johanna Pirker",
     "dept": "CS",
     "inst": [],
     "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Jürgen Richter-Gebert",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Geometry and Topology",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Silke Rolles",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Probability Theory",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Univ.-Prof. Dr. Daniel Rückert",
-    "dept": "CS",
-    "inst": [
-      "MDSI",
-      "MIBE",
-      "MUDS",
-      "MCML"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Digital Medicine and Personalised Prevention"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Claudia Scheimbauer",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Geometry and Topology",
-        "group_dept": "MATH"
-      },
-      {
-        "group_name": "Algebra",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Matthias Scherer",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Mathematical Finance and Actuarial Science",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Julia Schnabel",
-    "dept": "CS",
-    "inst": [
-      "MDSI",
-      "MIBE",
-      "MUDS",
-      "MCML"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Data Science and Machine Learning",
-      "Digital Medicine and Personalised Prevention",
-      "Cancer Research"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr.sc. ETH Zürich Angela Schöllig",
-    "dept": "CE",
-    "inst": [
-      "MIRMI",
-      "MCML"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Cybersecurity",
-      "Data Science and Machine Learning",
-      "Machine Intelligence and Robotics"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Eric Sonnendrücker",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Numerical Methods for Plasma Physics",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Suvrit Sra",
-    "dept": "MATH",
-    "inst": [
-      "MDSI",
-      "MCML"
-    ],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Data Science and Machine Learning"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Noam-Berger Steiger",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Probability Theory",
-        "group_dept": "MATH"
-      }
-    ],
     "TUM Focus Area": [],
     "website": ""
   },
@@ -2557,213 +2951,10 @@
     "website": ""
   },
   {
-    "name": "Prof. Dr. Fabian Theis",
-    "dept": "MATH",
-    "inst": [
-      "MDSI",
-      "MIBE",
-      "MUDS",
-      "MCML"
-    ],
-    "research_group": [
-      {
-        "group_name": "Mathematical Modeling of Biological Systems",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Data Science and Machine Learning",
-      "Digital Medicine and Personalised Prevention",
-      "Cancer Research",
-      "Machine Intelligence and Robotics"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr.-Ing. habil. Mario Trapp",
-    "dept": "CS",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Cybersecurity"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Michael Ulbrich",
-    "dept": "MATH",
-    "inst": [
-      "MIRMI",
-      "MEP"
-    ],
-    "research_group": [
-      {
-        "group_name": "Mathematical Optimization",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Machine Intelligence and Robotics"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Elisabeth Ullmann",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Scientific Computing and Uncertainty Quantification",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Boris Vexler",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Optimal Control",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Machine Intelligence and Robotics"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. phil. Tobias Vogl",
-    "dept": "CE",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Cybersecurity",
-      "High-Performance Communication Systems and Technologies",
-      "Quantum Science and Technology"
-    ],
-    "website": ""
-  },
-  {
     "name": "Prof. Dr. Stefan Wagner",
     "dept": "CS",
     "inst": [],
     "research_group": [],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Simone Warzel",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Mathematical Quan⁠tum Physics",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Quantum Science and Technology"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr.sc.nat. Violetta Weger",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Algebra",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Eva Weig",
-    "dept": "EE",
-    "inst": [],
-    "research_group": [],
-    "TUM Focus Area": [
-      "Energy Infrastructures and Sustainable Systems",
-      "High-Performance Communication Systems and Technologies",
-      "Quantum Science and Technology"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Andreas Wiese",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Discrete Optimization",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Barbara Wohlmuth",
-    "dept": "MATH",
-    "inst": [
-      "MEP"
-    ],
-    "research_group": [
-      {
-        "group_name": "Numerical Analysis",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Integrated Materials, Energy, and Process Engineering",
-      "Machine Intelligence and Robotics"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Michael-Marc Wolf",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Quantum Information Theory",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [
-      "Quantum Science and Technology"
-    ],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. Rudi Zagst",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Mathematical Finance and Actuarial Science",
-        "group_dept": "MATH"
-      }
-    ],
-    "TUM Focus Area": [],
-    "website": ""
-  },
-  {
-    "name": "Prof. Dr. rer. nat. Johannes Zimmer",
-    "dept": "MATH",
-    "inst": [],
-    "research_group": [
-      {
-        "group_name": "Analysis and Mathematical Biology",
-        "group_dept": "MATH"
-      }
-    ],
     "TUM Focus Area": [],
     "website": ""
   }
