@@ -7,6 +7,10 @@
       {
         "group_name": "Electronic, Optoelectronic and Hybrid Devices",
         "group_dept": "EE"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -27,6 +31,10 @@
       {
         "group_name": "Electromagnetic Sensors and Measurement Systems",
         "group_dept": "EE"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -46,6 +54,10 @@
       },
       {
         "group_name": "Electromagnetic Sensors and Measurement Systems",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Quantum Engineering",
         "group_dept": "EE"
       }
     ],
@@ -108,6 +120,10 @@
       {
         "group_name": "Embedded and Cyber-physical Systems",
         "group_dept": "CE"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -159,6 +175,10 @@
       },
       {
         "group_name": "Neuro-Engineering",
+        "group_dept": "EE"
+      },
+      {
+        "group_name": "Quantum Engineering",
         "group_dept": "EE"
       }
     ],
@@ -293,6 +313,10 @@
       {
         "group_name": "Algorithms & Complexity",
         "group_dept": "CS"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -689,6 +713,10 @@
       {
         "group_name": "Communications",
         "group_dept": "CE"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -706,6 +734,10 @@
       {
         "group_name": "Communications",
         "group_dept": "CE"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -805,6 +837,10 @@
       {
         "group_name": "Information Systems & Software Engineering",
         "group_dept": "CS"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -926,6 +962,10 @@
       {
         "group_name": "Design of Electronic Circuits and Systems",
         "group_dept": "CE"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -961,6 +1001,10 @@
       {
         "group_name": "Design of Electronic Circuits and Systems",
         "group_dept": "CE"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -1702,6 +1746,10 @@
       {
         "group_name": "Quantum Science",
         "group_dept": "MATH"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -2071,6 +2119,10 @@
       {
         "group_name": "Data & Information",
         "group_dept": "MATH"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -2094,6 +2146,10 @@
       {
         "group_name": "Data & Information",
         "group_dept": "MATH"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -2234,6 +2290,10 @@
       {
         "group_name": "Communications",
         "group_dept": "CE"
+      },
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
       }
     ],
     "TUM Focus Area": [
@@ -2393,7 +2453,7 @@
       },
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       },
       {
         "group_name": "Distributed & Mobile Computing",
@@ -2434,7 +2494,7 @@
       },
       {
         "group_name": "Human-centered Engineering",
-        "group_dept": "Unknown"
+        "group_dept": "CE"
       },
       {
         "group_name": "Neuro-Engineering",
@@ -2598,7 +2658,12 @@
     "name": "Prof. Dr. phil. Tobias Vogl",
     "dept": "CE",
     "inst": [],
-    "research_group": [],
+    "research_group": [
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
+      }
+    ],
     "TUM Focus Area": [
       "Cybersecurity",
       "High-Performance Communication Systems and Technologies",
@@ -2734,7 +2799,12 @@
     "name": "Prof. Dr. rer. nat. Eva Weig",
     "dept": "EE",
     "inst": [],
-    "research_group": [],
+    "research_group": [
+      {
+        "group_name": "Quantum Engineering",
+        "group_dept": "EE"
+      }
+    ],
     "TUM Focus Area": [
       "Energy Infrastructures and Sustainable Systems",
       "High-Performance Communication Systems and Technologies",
