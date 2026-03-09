@@ -1022,6 +1022,17 @@
                     });
                 }
 
+                // 按院系排序（CS, CE, EE, MATH, 其他），同院系按姓名排序
+                const deptOrder = ['CS', 'CE', 'EE', 'MATH'];
+                members.sort((a, b) => {
+                    const ia = deptOrder.indexOf(a.dept);
+                    const ib = deptOrder.indexOf(b.dept);
+                    const oa = ia === -1 ? 999 : ia;
+                    const ob = ib === -1 ? 999 : ib;
+                    if (oa !== ob) return oa - ob;
+                    return (a.name || '').localeCompare(b.name || '');
+                });
+
                 // 生成成员列表 HTML
                 let html = members.length ? '' : '<p style="color:#999">No data found.</p>';
                 members.forEach(m => {
